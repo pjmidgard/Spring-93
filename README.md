@@ -10,4 +10,5 @@ Author: Jurijus Pacalovas
 Speed: 
 
 2KB about 2 seconds.
+
 20KB about 71 seconds.
