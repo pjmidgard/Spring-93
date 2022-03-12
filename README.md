@@ -5,6 +5,6 @@ Spring-93 Algorithm:
 
 Former Algorithm:
 
-Save zeroues.
+Save zeros.
 
 
