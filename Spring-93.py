@@ -243,14 +243,14 @@ class compression:
                                                    
                                                    
                                                     if sda11[0:1]=="1" and former!=0  and sda11[2:3]=="0":
-                                                            sda11="00"+sda11[1:2]+sda[3:]
+                                                            sda11="000"+sda11[1:2]+sda11[3:]
 
                                                     if sda11[0:1]=="1" and former!=0 and sda11[3:4]=="0":
-                                                            sda11="01"+sda11[1:3]+sda[4:]
+                                                            sda11="001"+sda11[1:3]+sda11[4:]
                                                     
 
                                                     if sda11[T10-1:T10]=="0":
-                                                            sda11="00"+sda11[1:T10-1:T10]
+                                                            sda11="010"+sda11[1:T10-1:T10]
                                                             
                                                     if sda11[0:1]=="1" and former!=0:
                                                             sda11="0"+sda11[1:]
@@ -283,7 +283,7 @@ class compression:
 
                                     
 
-                                    if   Circle_times2==2:
+                                    if   Circle_times2==1:
 
                                                 
                                              sda17="1"+sda17
@@ -304,7 +304,7 @@ class compression:
                                              sda17=szx+sda17
                                              #print(len(sda17))
 
-                                    if   Circle_times2==2:
+                                    if   Circle_times2==1:
                                                 
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
