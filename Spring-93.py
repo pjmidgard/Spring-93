@@ -231,37 +231,47 @@ class compression:
 
                                     while ei<lenf6:
                                             sda4=sda3[ei:ei+1]
-                                            if sda4=="0":
+                                            if sda4=="1":
                                                     sda11=bin(former)[2:]
                                                     T10=len(sda11)
                                                     
                                                     if former==0:
-                                                            sda11="111111"#111111
-                                                                                                              
-                                                    elif former>(2**5)-1:
-                                                            raise SystemExit
-                                                   
-                                                   
-                                                    if sda11[0:1]=="1" and former!=0  and sda11[2:3]=="0":
-                                                            sda11="000"+sda11[1:2]+sda11[3:]
-
-                                                    if sda11[0:1]=="1" and former!=0 and sda11[3:4]=="0":
-                                                            sda11="001"+sda11[1:3]+sda11[4:]
-                                                    
-
-                                                    if sda11[T10-1:T10]=="0":
-                                                            sda11="010"+sda11[1:T10-1:T10]
-                                                            
-                                                    if sda11[0:1]=="1" and former!=0:
-                                                            sda11="0"+sda11[1:]
-
-                                                    if len(sda11)>3 and sda11=="111111":
-                                                            raise SystemExit
-                                                    
-                                                  
+                                                        sda11=="0000"
+                                                    if former==1:
+                                                        sda11=="0001"
+                                                    if former==2:
+                                                        sda11=="0010"
+                                                    if former==3:
+                                                        sda11=="0011"
+                                                    if former==4:
+                                                        sda11=="0100"
+                                                    if former==5:
+                                                        sda11=="0101"
+                                                    if former==6:
+                                                        sda11=="0110"
+                                                    if former==7:
+                                                        sda11=="0111"
+                                                    if former==8:
+                                                        sda11=="1000"
+                                                    if former==9:
+                                                        sda11=="1001"
+                                                    if former==10:
+                                                        sda11=="1010"
+                                                    if former==11:
+                                                        sda11=="1011"
+                                                    if former==12:
+                                                        sda11=="1100"
+                                                    if former==13: 
+                                                        sda11=="1101"   
+                                                    if former==14: 
+                                                         sda11=="1110" 
+                                                    if former==15: 
+                                                          sda11=="1111"   
+                                                    if former>15:
+                                                        raise SystemExit
                                                     sda10=sda10+sda11
-                                                    
                                                     former=0
+                                                                                                   
                                             former=former+1
                                             ei=ei+1
                                                       
