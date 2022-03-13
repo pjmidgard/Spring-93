@@ -293,7 +293,7 @@ class compression:
 
                                     
 
-                                    if   Circle_times2==1:
+                                    if   Circle_times2==100:
 
                                                 
                                              sda17="1"+sda17
@@ -314,7 +314,7 @@ class compression:
                                              sda17=szx+sda17
                                              #print(len(sda17))
 
-                                    if   Circle_times2==1:
+                                    if   Circle_times2==100:
                                                 
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
