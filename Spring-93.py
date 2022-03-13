@@ -242,11 +242,11 @@ class compression:
                                                             raise SystemExit
                                                    
                                                    
-                                                    if sda11[0:1]=="1" and former!=0 and sda11[T10-1:T10]!="0" and sda11[2:3]=="0":
-                                                            sda11="10"+sda11[1:2]
+                                                    if sda11[0:1]=="1" and former!=0  and sda11[2:3]=="0":
+                                                            sda11="000"+sda11[1:2]
 
-                                                    if sda11[0:1]=="1" and former!=0 and sda11[T10-1:T10]!="0" and sda11[3:4]=="0":
-                                                            sda11="11"+sda11[1:]
+                                                    if sda11[0:1]=="1" and former!=0 and sda11[3:4]=="0":
+                                                            sda11="01"+sda11[1:]
 
                                                     if sda11[T10-1:T10]=="0":
                                                             sda11="00"+sda11[1:T10-1:T10]
