@@ -249,7 +249,7 @@ class compression:
                                                             sda11="001"+sda11[1:3]+sda[4:]
 
                                                     if sda11[T10-1:T10]=="0":
-                                                            sda11="00"+sda11[1:T10-1:T10]
+                                                            sda11="010"+sda11[1:T10-1:T10]
                                                             
                                                     if sda11[0:1]=="1" and former!=0:
                                                             sda11="0"+sda11[1:]
