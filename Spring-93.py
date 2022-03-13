@@ -243,7 +243,7 @@ class compression:
                                                    
                                                    
                                                     if sda11[0:1]=="1" and former!=0  and sda11[2:3]=="0":
-                                                            sda11="000"+sda11[1:2]+sda[3:]
+                                                            sda11="00"+sda11[1:2]+sda[3:]
 
                                                     if sda11[0:1]=="1" and former!=0 and sda11[3:4]=="0":
                                                             sda11="01"+sda11[1:3]+sda[4:]
@@ -255,9 +255,9 @@ class compression:
                                                     if sda11[0:1]=="1" and former!=0:
                                                             sda11="0"+sda11[1:]
 
-
                                                     if len(sda11)>3 and sda11=="111111":
                                                             raise SystemExit
+                                                    
                                                   
                                                     sda10=sda10+sda11
                                                     
@@ -283,7 +283,7 @@ class compression:
 
                                     
 
-                                    if   Circle_times2==1:
+                                    if   Circle_times2==2:
 
                                                 
                                              sda17="1"+sda17
@@ -304,7 +304,7 @@ class compression:
                                              sda17=szx+sda17
                                              #print(len(sda17))
 
-                                    if   Circle_times2==1:
+                                    if   Circle_times2==2:
                                                 
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
