@@ -253,8 +253,9 @@ class compression:
                                                             
                                                     if sda11[0:1]=="1" and former!=0:
                                                             sda11="0"+sda11[1:]
-                                                  
-                                                            
+                                                    
+                                                    if len(sda11)>3 and sda11==111111:
+                                                        raise SystemExit
                                                     sda10=sda10+sda11
                                                     
                                                     former=0
