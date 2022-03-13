@@ -234,30 +234,20 @@ class compression:
                                             if sda4=="0":
                                                     sda11=bin(former)[2:]
                                                     T10=len(sda11)
-                                                    
-                                                  
+
                                                     if former==0:
                                                             sda11="111111"#111111
                                                     elif sda11[T10-1:T10]=="0":
-                                                            sda11=sda11[1:]+"11"#011m, 0110, 011011, 011111111
+                                                            sda11="01"+sda11[1:T10-1:T10]#011m, 0110, 011011, 011111111
                                                             
                                                             
                                                     elif former>(2**5)-1:
                                                             raise SystemExit
-                                                    #011-000000
-                                                    elif sda11[0:3]=="011":
-                                                            sda11="000000"+sda11[3:]
-                                                    elif sda11[1:4]=="011":
-                                                            sda11=sda11[0:1]+"000000"+sda11[4:]
-                                                    elif sda11[2:5]=="011":
-                                                            sda11=sda11[0:2]+"000000"+sda11[5:]
-                                                    elif sda11[3:6]=="011":
-                                                            sda11=sda11[0:3]+"000000"+sda11[6:]
-                                                        
+                                                   
                                                             
                                                         
                                                     if sda11[0:1]=="1" and former!=0 and sda11[T10-1:T10]!="0":
-                                                            sda11="0"+sda11[1:]#10
+                                                            sda11="0"+sda11[1:]#10    
                                                   
                                                             
                                                     sda10=sda10+sda11
@@ -269,6 +259,7 @@ class compression:
                                             
                  
                                     sda17=sda10
+                                    
                                     #print(sda17)
                               
                                     
@@ -280,9 +271,24 @@ class compression:
                           
                                     sda2=sda17
 
-                                  
 
-                                    if   Circle_times2==1:
+                                    if   lenfS<=8:
+
+                                                
+                                             sda30=bin(Circle_times2)[3:]
+                                             lenf=len(sda30)
+                                             if lenf>48:
+                                                     raise SystemExit
+                                        
+                                             szx1=""
+                                             xc=48-lenf%48
+                                             z=0
+                                             if xc!=48:
+                                                     while z<xc:
+                                                         szx1="0"+szx1
+                                                         z=z+1
+
+                                    if   lenfS<=8:
 
                                                 
                                              sda17="1"+sda17
@@ -291,18 +297,19 @@ class compression:
                                              szx=""
                                              xc=8-lenf%8
                                              z=0
-                                             while z<xc:
-                                                 szx="0"+szx
-                                                 z=z+1
+                                             if xc!=8:
+                                                     while z<xc:
+                                                         szx="0"+szx
+                                                         z=z+1
    
                                
                                     
                                              lenf=len(sda17)
                                             
-                                             sda17=szx+sda17
+                                             sda17=szx1+sda30+szx+sda17
                                              #print(len(sda17))
 
-                                    if   Circle_times2==1:
+                                    if   lenfS<=8:
                                                 
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
