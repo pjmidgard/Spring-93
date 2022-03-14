@@ -305,17 +305,19 @@ class compression:
                                                             if former==16: 
                                                                   sda11="10000" 
                                                             if former==17: 
-                                                                  sda11="10001"   
+                                                                  sda11="10001"
+                                                            if former==18: 
+                                                                  sda11="10010"
                                                             if former==19: 
-                                                                  sda11="10010" 
+                                                                  sda11="10011" 
                                                             if former==20: 
-                                                                  sda11="10011"  
+                                                                  sda11="10100"  
                                                             if former==21: 
-                                                                  sda11="10100" 
-                                                            if former==22: 
                                                                   sda11="10101" 
+                                                            if former==22: 
+                                                                  sda11="10110" 
                                                             if former==23: 
-                                                                  sda11="10110"
+                                                                  sda11="10111"
                                                             if former==24: 
                                                                   sda11="11000"  
                                                             if former==25: 
