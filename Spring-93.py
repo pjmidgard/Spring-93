@@ -267,6 +267,7 @@ class compression:
                                                                 
                                                                sda11=="0001" 
                                                             if former>14:
+                                                                print("This file not able to compress.")
                                                                 raise
                                                                 SystemExit
                                                     if Circle_times2==0:
@@ -335,6 +336,7 @@ class compression:
                                                             if former==31: 
                                                                   sda11="11111"
                                                             if former>31:
+                                                                print("This file not able to compress.")
                                                                 raise SystemExit
                                                     sda10=sda10+sda11
                                                     former=0
