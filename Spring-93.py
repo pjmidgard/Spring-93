@@ -235,26 +235,106 @@ class compression:
                                                     sda11=bin(former)[2:]
                                                     T10=len(sda11)
                                                     if Circle_times2>0:
-                                                                                                                                                         if T10==1:
-                                                                                                                                                             sda11="000"+sda11    
-                                                                                                                                                         if T10==2:
-                                                                                                                                                             sda11="00"+sda11
-                                                                                                                                                         if T10==3:
-                                                                                                                                                             sda11="0"+sda11
-                                                                                                                                                                                                                                                        sda11=sda11[::-1]
-                                                             
+                                                            if former==0:
+                                                                sda11=="1111"
+                                                            if former==1:
+                                                                sda11=="1110"
+                                                            if former==2:
+                                                                sda11=="1101"
+                                                            if former==3:
+                                                                sda11=="1100"
+                                                            if former==4:
+                                                                sda11=="1011"
+                                                            if former==5:
+                                                                sda11=="1010"
+                                                            if former==6:
+                                                                sda11=="1001"
+                                                            if former==7:
+                                                                sda11=="1000"
+                                                            if former==8:
+                                                                sda11=="0111"
+                                                            if former==9:
+                                                                sda11=="0110"
+                                                            if former==10:
+                                                                sda11=="0101"
+                                                            if former==11:
+                                                                sda11=="0100"
+                                                            if former==12:
+                                                                sda11=="0011"
+                                                            if former==13: 
+                                                                                                                                                            sda11=="0010"   
+                                                            if former==14: 
+                                                                
+                                                               sda11=="0001" 
                                                             if former>14:
                                                                 print("This file not able to compress.")
                                                                 raise
                                                                 SystemExit
                                                     if Circle_times2==0:
-                                                            if T10==1:
-                                                                sda11="0000"+sda11                                                                                                                                             if T10==2:
-                                                                sda11="000"+sda11
-                                                                                                                                                         if T10==3:
-                                                                sda11="00"+sda11
-                                                                                                                                                         if T10==4:
-                                                                sda11="0"+sda11
+                                                            if former==0:
+                                                                sda11="00000"
+                                                            if former==1:
+                                                                sda11="00001"
+                                                            if former==2:
+                                                                sda11="00010"
+                                                            if former==3:
+                                                                sda11="00011"
+                                                            if former==4:
+                                                                sda11="00100"
+                                                            if former==5:
+                                                                sda11="00101"
+                                                            if former==6:
+                                                                sda11="00110"
+                                                            if former==7:
+                                                                sda11="00111"
+                                                            if former==8:
+                                                                sda11="01000"
+                                                            if former==9:
+                                                                sda11="01001"
+                                                            if former==10:
+                                                                sda11="01010"
+                                                            if former==11:
+                                                                sda11="01011"
+                                                            if former==12:
+                                                                sda11="01100"
+                                                            if former==13: 
+                                                                sda11="01101"   
+                                                            if former==14: 
+                                                                 sda11="01110" 
+                                                            if former==15: 
+                                                                  sda11="01111"   
+                                                            if former==16: 
+                                                                  sda11="10000" 
+                                                            if former==17: 
+                                                                  sda11="10001"
+                                                            if former==18: 
+                                                                  sda11="10010"
+                                                            if former==19: 
+                                                                  sda11="10011" 
+                                                            if former==20: 
+                                                                  sda11="10100"  
+                                                            if former==21: 
+                                                                  sda11="10101" 
+                                                            if former==22: 
+                                                                  sda11="10110" 
+                                                            if former==23: 
+                                                                  sda11="10111"
+                                                            if former==24: 
+                                                                  sda11="11000"  
+                                                            if former==25: 
+                                                                  sda11="11001"
+                                                            if former==26: 
+                                                                  sda11="11010"
+                                                            if former==27: 
+                                                                  sda11="11011"    
+                                                            if former==28: 
+                                                                  sda11="11100"
+                                                            if former==29: 
+                                                                  sda11="11101"
+                                                            if former==30: 
+                                                                  sda11="11110" 
+                                                            if former==31: 
+                                                                  sda11="11111"
                                                             if former>31:
                                                                 print("This file not able to compress.")
                                                                 raise SystemExit
