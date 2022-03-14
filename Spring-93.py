@@ -229,8 +229,6 @@ class compression:
                                     while ei<lenf6:
                                             sda4=sda3[ei:ei+1]
                                             if sda4=="1":
-                                                    sda11=bin(former)[2:]
-                                                    T10=len(sda11)
                                                     if Circle_times2>0:
                                                             if former==0:
                                                                 sda11=="0000"
