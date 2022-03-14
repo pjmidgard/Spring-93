@@ -173,10 +173,7 @@ class compression:
                                     lenf3=len(sda2)
                                 lenf2=len(sda2)
                                 #print(lenf2)
-                                if i==1:
-                                    if lenf7>=(2**40)-1:
-                                        raise SystemExit
-
+                        
                                 #########################################################################################################################################################
                                 
                                 
@@ -268,6 +265,7 @@ class compression:
                                                             if former==15: 
                                                                 sda11=="1111"   
                                                             if former>15:
+                                                                print("This file not able to compress")
                                                                 raise SystemExit
                                                     if Circle_times2==0:
                                                             if former==0:
@@ -335,6 +333,7 @@ class compression:
                                                             if former==31: 
                                                                   sda11="11111"
                                                             if former>31:
+                                                                print("This file not able to compress")
                                                                 raise SystemExit
                                                     sda10=sda10+sda11
                                                     former=0
