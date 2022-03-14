@@ -12,4 +12,6 @@ By this alogrithm we can compress very many information to 22 Bytes or biger.
 
 This algorithm use compress random files and .paq.
 
+#Author: Jurijus Pacalovas
+
 
