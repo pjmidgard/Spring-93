@@ -267,8 +267,8 @@ class compression:
                                                                 sda11=="1110" 
                                                             if former==15: 
                                                                 sda11=="1111"   
-                                                    if former>15:
-                                                        raise SystemExit
+                                                            if former>15:
+                                                                raise SystemExit
                                                     if Circle_times2==0:
                                                             if former==0:
                                                                 sda11="00000"
