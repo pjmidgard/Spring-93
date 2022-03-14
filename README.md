@@ -6,8 +6,7 @@ Spring-93 Algorithm:
 
 Former Algorithm:
 
-Save ones: (2 ** 5)-1 after (2 **4 )-1. We need to count long Between ones.
-We need to save from 1111 to 0001 it's should be opposed.
+Save zeroes: (2 ** 5)-1 after (2 **4 )-1. We need to count long Between zeroes after former equal long of zeroes and 1 or 0.
 
 By this alogrithm we can compress very many information to 22 Bytes or bigger or smaller.
 
