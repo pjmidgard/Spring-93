@@ -368,7 +368,7 @@ class compression:
                               
                                     
                                     lenfS=len(sda17)
-                                    print(lenfS)
+                                    #print(lenfS)
 
                                    
                                     Circle_times2=Circle_times2+1
