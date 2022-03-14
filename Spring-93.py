@@ -236,36 +236,36 @@ class compression:
                                                     T10=len(sda11)
                                                     if Circle_times2>0:
                                                             if former==0:
-                                                                sda11=="1111"
+                                                                sda11="1111"
                                                             if former==1:
-                                                                sda11=="1110"
+                                                                sda11="1110"
                                                             if former==2:
-                                                                sda11=="1101"
+                                                                sda11="1101"
                                                             if former==3:
-                                                                sda11=="1100"
+                                                                sda11="1100"
                                                             if former==4:
-                                                                sda11=="1011"
+                                                                sda11="1011"
                                                             if former==5:
-                                                                sda11=="1010"
+                                                                sda11="1010"
                                                             if former==6:
-                                                                sda11=="1001"
+                                                                sda11="1001"
                                                             if former==7:
-                                                                sda11=="1000"
+                                                                sda11="1000"
                                                             if former==8:
-                                                                sda11=="0111"
+                                                                sda11="0111"
                                                             if former==9:
-                                                                sda11=="0110"
+                                                                sda11="0110"
                                                             if former==10:
-                                                                sda11=="0101"
+                                                                sda11="0101"
                                                             if former==11:
-                                                                sda11=="0100"
+                                                                sda11="0100"
                                                             if former==12:
-                                                                sda11=="0011"
+                                                                sda11="0011"
                                                             if former==13: 
-                                                                                                                                                            sda11=="0010"   
+                                                                                                                                                           sda11="0010"   
                                                             if former==14: 
                                                                 
-                                                               sda11=="0001" 
+                                                               sda11="0001" 
                                                             if former>14:
                                                                 print("This file not able to compress.")
                                                                 raise
@@ -298,9 +298,9 @@ class compression:
                                                             if former==12:
                                                                 sda11="01100"
                                                             if former==13: 
-                                                                sda11="01101"   
+                                                               sda11="01101"   
                                                             if former==14: 
-                                                                 sda11="01110" 
+                                                               sda11="01110" 
                                                             if former==15: 
                                                                   sda11="01111"   
                                                             if former==16: 
@@ -352,7 +352,7 @@ class compression:
                               
                                     
                                     lenfS=len(sda17)
-                                    #print(lenfS)
+                                    print(lenfS)
 
                                    
                                     Circle_times2=Circle_times2+1
