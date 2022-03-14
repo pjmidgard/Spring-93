@@ -5,6 +5,6 @@ Spring-93 Algorithm:
 
 Former Algorithm:
 
-Save ones: (2 ** 5)-1 after (2 **4 )-1.
+Save ones: (2 ** 5)-1 after (2 **4 )-1. We need to count long Between ones.
 
 
