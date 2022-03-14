@@ -173,7 +173,10 @@ class compression:
                                     lenf3=len(sda2)
                                 lenf2=len(sda2)
                                 #print(lenf2)
-                        
+                                if i==1:
+                                    if lenf7>=(2**40)-1:
+                                        raise SystemExit
+
                                 #########################################################################################################################################################
                                 
                                 
@@ -229,42 +232,43 @@ class compression:
                                     while ei<lenf6:
                                             sda4=sda3[ei:ei+1]
                                             if sda4=="1":
+                                                    sda11=bin(former)[2:]
+                                                    T10=len(sda11)
                                                     if Circle_times2>0:
                                                             if former==0:
-                                                                sda11=="0000"
+                                                                sda11=="1111"
                                                             if former==1:
-                                                                sda11=="0001"
+                                                                sda11=="1110"
                                                             if former==2:
-                                                                sda11=="0010"
+                                                                sda11=="1101"
                                                             if former==3:
-                                                                sda11=="0011"
-                                                            if former==4:
-                                                                sda11=="0100"
-                                                            if former==5:
-                                                                sda11=="0101"
-                                                            if former==6:
-                                                                sda11=="0110"
-                                                            if former==7:
-                                                                sda11=="0111"
-                                                            if former==8:
-                                                                sda11=="1000"
-                                                            if former==9:
-                                                                sda11=="1001"
-                                                            if former==10:
-                                                                sda11=="1010"
-                                                            if former==11:
-                                                                sda11=="1011"
-                                                            if former==12:
                                                                 sda11=="1100"
+                                                            if former==4:
+                                                                sda11=="1011"
+                                                            if former==5:
+                                                                sda11=="1010"
+                                                            if former==6:
+                                                                sda11=="1001"
+                                                            if former==7:
+                                                                sda11=="1000"
+                                                            if former==8:
+                                                                sda11=="0111"
+                                                            if former==9:
+                                                                sda11=="0110"
+                                                            if former==10:
+                                                                sda11=="0101"
+                                                            if former==11:
+                                                                sda11=="0100"
+                                                            if former==12:
+                                                                sda11=="0011"
                                                             if former==13: 
-                                                                sda11=="1101"   
+                                                                                                                                                            sda11=="0010"   
                                                             if former==14: 
-                                                                sda11=="1110" 
-                                                            if former==15: 
-                                                                sda11=="1111"   
-                                                            if former>15:
-                                                                print("This file not able to compress")
-                                                                raise SystemExit
+                                                                
+                                                               sda11=="0001" 
+                                                            if former>14:
+                                                                raise
+                                                                SystemExit
                                                     if Circle_times2==0:
                                                             if former==0:
                                                                 sda11="00000"
@@ -331,7 +335,6 @@ class compression:
                                                             if former==31: 
                                                                   sda11="11111"
                                                             if former>31:
-                                                                print("This file not able to compress")
                                                                 raise SystemExit
                                                     sda10=sda10+sda11
                                                     former=0
