@@ -173,9 +173,9 @@ class compression:
                                     lenf3=len(sda2)
                                 lenf2=len(sda2)
                                 #print(lenf2)
-                             
-                                
-                                 
+                                if i==1:
+                                    if lenf7>=(2**40)-1:
+                                        raise SystemExit
 
                                 #########################################################################################################################################################
                                 
@@ -235,28 +235,26 @@ class compression:
                                                     sda11=bin(former)[2:]
                                                     T10=len(sda11)
                                                     if Circle_times2>0:
-                                                            if T10==1:
-                                                                  sda11="000"+sda11    
-                                                            if T10==2:
-                                                                  sda11="00"+sda11
-                                                            if T10==3:
-                                                                  sda11="0"+sda11
-                                                            sda11=sda11[::-1]
-                                                                                                                                                                                                                                  sd
+                                                                                                                                                         if T10==1:
+                                                                                                                                                             sda11="000"+sda11    
+                                                                                                                                                         if T10==2:
+                                                                                                                                                             sda11="00"+sda11
+                                                                                                                                                         if T10==3:
+                                                                                                                                                             sda11="0"+sda11
+                                                                                                                                                                                                                                                        sda11=sda11[::-1]
+                                                             
                                                             if former>14:
                                                                 print("This file not able to compress.")
                                                                 raise
                                                                 SystemExit
                                                     if Circle_times2==0:
                                                             if T10==1:
-                                                                sda11="0000"+sda11 
-                                                            if T10==2:
+                                                                sda11="0000"+sda11                                                                                                                                             if T10==2:
                                                                 sda11="000"+sda11
-                                                            if T10==3:                                                                                            
+                                                                                                                                                         if T10==3:
                                                                 sda11="00"+sda11
-                                                            if T10==4:                                                                                            
+                                                                                                                                                         if T10==4:
                                                                 sda11="0"+sda11
-                                                            
                                                             if former>31:
                                                                 print("This file not able to compress.")
                                                                 raise SystemExit
