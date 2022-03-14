@@ -230,47 +230,60 @@ class compression:
                                     former=0
 
                                     while ei<lenf6:
-                                            sda4=sda3[ei:ei+1]
-                                            if sda4=="1":
-                                                    sda11=bin(former)[2:]
-                                                    T10=len(sda11)
+                                            
+                                            if Circle_times2>0:
+                                                sda4=sda3[ei:ei+4]
+                                            if Circle_times2==0:
+                                                sda4=sda3[ei:ei+1]
+                                            if sda4=="0" and Circle_times2==0 or Circle_times2>0:
+                                                   
                                                     if Circle_times2>0:
+                                                            former = int(sda4, 2)
+                                                            #print(former)
+                                                            T10=len(sda11)
                                                             if former==0:
-                                                                sda11="1111"
+                                                                sda11="0"
                                                             if former==1:
-                                                                sda11="1110"
+                                                                sda11="01"
                                                             if former==2:
-                                                                sda11="1101"
+                                                                sda11="001"
                                                             if former==3:
-                                                                sda11="1100"
+                                                                sda11="0001"
                                                             if former==4:
-                                                                sda11="1011"
+                                                                sda11="00001"
                                                             if former==5:
-                                                                sda11="1010"
+                                                                sda11="000001"
                                                             if former==6:
-                                                                sda11="1001"
+                                                                sda11="0000001"
                                                             if former==7:
-                                                                sda11="1000"
+                                                                sda11="00000001"
                                                             if former==8:
-                                                                sda11="0111"
+                                                                sda11="000000001"
                                                             if former==9:
-                                                                sda11="0110"
+                                                                sda11="0000000001"
                                                             if former==10:
-                                                                sda11="0101"
+                                                                sda11="00000000001"
                                                             if former==11:
-                                                                sda11="0100"
+                                                                sda11="000000000001"
                                                             if former==12:
-                                                                sda11="0011"
+                                                                sda11="0000000000001"
                                                             if former==13: 
-                                                                                                                                                           sda11="0010"   
+                                                                                                                                                           sda11="00000000000001"   
                                                             if former==14: 
                                                                 
-                                                               sda11="0001" 
-                                                            if former>14:
+                                                               sda11="000000000000001"
+                                                            if former==15: 
+                                                                
+                                                               sda11="0000000000000001" 
+                                                            if former>15:
                                                                 print("This file not able to compress.")
                                                                 raise
                                                                 SystemExit
+                                                            #print(sda11)
                                                     if Circle_times2==0:
+                                                            sda11=bin(former)[2:]
+                                                            #print(sda11)
+                                                            T10=len(sda11)
                                                             if former==0:
                                                                 sda11="00000"
                                                             if former==1:
@@ -342,7 +355,10 @@ class compression:
                                                     former=0
                                                                                                    
                                             former=former+1
-                                            ei=ei+1
+                                            if Circle_times2==0:
+                                                ei=ei+1
+                                            if Circle_times2>0:
+                                                ei=ei+4
                                                       
                                             
                  
