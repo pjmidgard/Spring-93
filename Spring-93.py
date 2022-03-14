@@ -231,18 +231,18 @@ class compression:
 
                                     while ei<lenf6:
                                             
-                                            if Circle_times2>0:
+                                            if Circle_times2>=0:
                                                 sda4=sda3[ei:ei+4]
                                             if Circle_times2==0:
                                                 sda4=sda3[ei:ei+1]
-                                            if sda4=="0" and Circle_times2==0 or Circle_times2>0:
+                                            if sda4=="0" and Circle_times2==0 or Circle_times2>=0:
                                                    
-                                                    if Circle_times2>0:
+                                                    if Circle_times2>=0:
                                                             former = int(sda4, 2)
                                                             #print(former)
                                                             T10=len(sda11)
                                                             if former==0:
-                                                                sda11="0"
+                                                                sda11="1"
                                                             if former==1:
                                                                 sda11="01"
                                                             if former==2:
@@ -280,7 +280,7 @@ class compression:
                                                                 raise
                                                                 SystemExit
                                                             #print(sda11)
-                                                    if Circle_times2==0:
+                                                    if Circle_times2==-1:
                                                             sda11=bin(former)[2:]
                                                             #print(sda11)
                                                             T10=len(sda11)
@@ -355,9 +355,9 @@ class compression:
                                                     former=0
                                                                                                    
                                             former=former+1
-                                            if Circle_times2==0:
-                                                ei=ei+1
-                                            if Circle_times2>0:
+                                            
+                                                
+                                            if Circle_times2>=0:
                                                 ei=ei+4
                                                       
                                             
@@ -368,7 +368,7 @@ class compression:
                               
                                     
                                     lenfS=len(sda17)
-                                    #print(lenfS)
+                                    print(lenfS)
 
                                    
                                     Circle_times2=Circle_times2+1
@@ -376,21 +376,10 @@ class compression:
                                     sda2=sda17
 
 
-                                    if  lenfS<=8 or Circle_times2==(2**160)-1:
-                                             sda171=bin(Circle_times2)[2:]
-                                             lenf=len(sda171)
-                                        
-                                             szx1=""
-                                             xc=160-lenf%160
-                                             z=0
-                                             if xc!=160:
-                                                     while z<xc:
-                                                         szx1="0"+szx1
-                                                         z=z+1
-   
+
                                
 
-                                    if  lenfS<=8 or Circle_times2==(2**160)-1:
+                                    if  Circle_times2==1:
 
                                                 
                                              sda17="1"+sda17
@@ -407,10 +396,10 @@ class compression:
                                     
                                              lenf=len(sda17)
                                             
-                                             sda17=szx1+sda171+szx+sda17
+                                             sda17=szx+sda17
                                              #print(len(sda17))
 
-                                    if   lenfS<=8 or Circle_times2==(2**160)-1:
+                                    if   Circle_times2==1:
                                                 
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
