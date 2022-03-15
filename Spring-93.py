@@ -248,7 +248,10 @@ class compression:
                                                             sda11=bin(former)[2:]
                                                             
                                                             former2=former2+1
-                                                                                                                            
+                                                            if former==0:                                                                   sda11=bin(former)[2:]
+                                                            
+                                                                    former2=former2+1
+                                                                                                   
                                                                 
                                                              
                                                             if former!=0:
