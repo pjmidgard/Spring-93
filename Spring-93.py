@@ -243,18 +243,10 @@ class compression:
                                      
                                              
                                             if sda4=="0":
+                                                    sda11=bin(former)[2:]
                                            
                                                     if Circle_times2>=0:
-                                                            sda11=bin(former)[2:]
-                                                            
-                                                            former2=former2+1
-                                                            if former==0:                                                                   sda11=bin(former)[2:]
-                                                            
-                                                                    former2=former2+1
-                                                                                                   
-                                                                
-                                                             
-                                                            if former!=0:
+                         
 
                                                            
                                                                 
@@ -271,30 +263,15 @@ class compression:
                                                                              z=z+1
                                          
                                                          
-                                                                sda11=szx+sda14
+                                                                sda11=szx+sda11
                                                                 former3=former2
-                                                                former2=0
-                                                                if former2==0:
-                                                                        sda12=bin(former3)[2:]
-                                                                        lenf=len(sda12)
-                                                             
-                                                                        szx1=""
-                                                                        xc=4-lenf%4
-                                                                        z=0
-                                                                        if xc!=4:
-                                                                                 while z<xc:
-                                                                                     szx1="0"+szx1
-                                                                                     z=z+1
-                                                 
-                                                                 
-                                                                        sda12=szx1+sda12 
                                                                         
-                                                                if former>31 or former2>15:
+                                                                if former>31:
                                                                         print("This file not able to compress.")
                                                                         raise SystemExit
                                                              
                                                            
-                                                    sda10=sda10+sda12+sda11
+                                                    sda10=sda10+sda11
                                                     former=0
                                                                                                    
                                             former=former+1
