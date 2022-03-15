@@ -230,6 +230,7 @@ class compression:
                                     ei=0
                                     former=0
                                     former2=0
+                                    former3=0
                                      
                                      
                                     while ei<lenf6:
@@ -237,32 +238,23 @@ class compression:
                                           
                                             if Circle_times2>=0:
                                                 sda4=sda3[ei:ei+1]
-                                                #print(former2)
+                                                
                                      
                                      
                                              
                                             if sda4=="0":
                                            
                                                     if Circle_times2>=0:
-                                                            sda12=bin(former2)[2:]
-                                                            if former==0:
-                                                                former2=former2+1
+                                                            sda11=bin(former)[2:]
+                                                            
+                                                            former2=former2+1
                                                                                                                             
-                                                                lenf=len(sda12)
-                                                             
-                                                                szx1=""
-                                                                xc=4-lenf%4
-                                                                z=0
-                                                                if xc!=4:
-                                                                         while z<xc:
-                                                                             szx1="0"+szx1
-                                                                             z=z+1
-                                         
-                                                         
-                                                                sda12=szx1+sda12 
                                                                 
                                                              
                                                             if former!=0:
+
+                                                           
+                                                                
                                                                  
                                                              
                                                                 lenf=len(sda11)
@@ -277,12 +269,28 @@ class compression:
                                          
                                                          
                                                                 sda11=szx+sda14
+                                                                former3=former2
                                                                 former2=0
+                                                                if former2==0:
+                                                                        sda12=bin(former3)[2:]
+                                                                        lenf=len(sda12)
                                                              
+                                                                        szx1=""
+                                                                        xc=4-lenf%4
+                                                                        z=0
+                                                                        if xc!=4:
+                                                                                 while z<xc:
+                                                                                     szx1="0"+szx1
+                                                                                     z=z+1
+                                                 
+                                                                 
+                                                                        sda12=szx1+sda12 
+                                                                        
+                                                                if former>31 or former2>15:
+                                                                        print("This file not able to compress.")
+                                                                        raise SystemExit
                                                              
-                                                            if former>31 or former2>15:
-                                                                print("This file not able to compress.")
-                                                                raise SystemExit
+                                                           
                                                     sda10=sda10+sda12+sda11
                                                     former=0
                                                                                                    
