@@ -236,10 +236,15 @@ class compression:
                                            
                                             T8=T7//2
                                             T7=T7-T8
-                                            if T7==0:
-                                                ccc=3
-                                            else:
-                                                T7=T7+1
+                                            if T7!=T8:
+                                               T7=T7+2
+                                            if T7==T8:
+                                               T7=T7+1
+                                           
+                                             
+                                               
+                                          
+                                     
                                            
                                            
                                               
