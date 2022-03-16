@@ -234,8 +234,10 @@ class compression:
                                             T7 = int(sda4, 2)
                                             T8=T7//2
                                             T7=T7-T8
-                                              
+
+                                           
                                             sda11=bin(T7)[2:]
+                                            
                                                             
                                             lenf=len(sda11)
                                                              
