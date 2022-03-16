@@ -53,6 +53,7 @@ class compression:
                     
                     ccc=1
                     Cx=0
+                    sda7=""
 
                     if i==2:
                         Format=".Spring93"
@@ -217,7 +218,7 @@ class compression:
                                     szx=""
 
                                     sda6=""
-                                    sda7=""
+                                   
                                    
 
                                     #Compression
