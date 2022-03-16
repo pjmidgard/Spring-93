@@ -302,9 +302,9 @@ class compression:
                                        
                                         
                                          if Cx==0:
-                                             sda17="0"+sda7         
+                                             sda17="0"+sda17         
                                          if Cx==1:
-                                             sda17="1"+sda17    
+                                             sda17="1"+sda7   
                                          if ccc==2 and Cx==0:
                                              sda17="100"+sda17
                                          if ccc==1 and Cx==0:
