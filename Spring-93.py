@@ -54,6 +54,7 @@ class compression:
                     ccc=1
                     Cx=0
                     sda7=""
+                    Circle_times2=0
 
                     if i==2:
                         Format=".Spring93"
@@ -77,6 +78,8 @@ class compression:
                     nac=len(nameas)
                     
                     Circle_times3=0
+                    Circle_times4=0
+                    Circle_times5=0
                     cvf=2
                     cvf1=0
                     s=""
@@ -232,7 +235,7 @@ class compression:
                                     
                                     while ei<lenf6:
                                              
-                                            if Circle_times2==0:
+                                            if Circle_times2==0 or Circle_times4==0:
                                                  sda7=sda3
                                              
                                             
@@ -265,7 +268,7 @@ class compression:
                                             szx=""
                                             xc=(lenf6-1)-lenf%(lenf6-1)
                                             z=0
-                                            if xc!=7:
+                                            if xc!=(lenf6-1)-lenf%(lenf6-1):
                                                 while z<xc:
                                                         szx="0"+szx
                                                         z=z+1
@@ -286,33 +289,53 @@ class compression:
                  
 
                                     
-                                    #print(sda17)
+                                
                               
                                     sda17=sda10
                                     lenfS=len(sda17)
+                                    #print(lenfS)
                                     
                                     
 
                                    
                                     Circle_times2=Circle_times2+1
+                                    Circle_times4=Circle_times4+1
                           
                                     sda2=sda17
                                     
-                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3 or Cx==1:
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3 or Cx==1 or Circle_times5==(2**160)-1:
                                        
                                         
                                          if Cx==0:
                                              sda17="0"+sda17         
                                          if Cx==1:
-                                             sda17="1"+sda7   
+                                             sda17="1"+sda7
+                                             Circle_times5=Circle_times5+1
+                                             
                                          if ccc==2 and Cx==0:
                                              sda17="100"+sda17
                                          if ccc==1 and Cx==0:
                                              sda17="101"+sda17
+
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3 or Circle_times5==(2**160)-1:
+                                              
+                                                    
+                                              
+                                                
+                                             sda172=bin(Circle_times5)[2:]
+                                             lenf=len(sda172)
+                                        
+                                             szx2=""
+                                             xc=160-lenf%160
+                                             z=0
+                                             if xc!=160:
+                                                     while z<xc:
+                                                         szx2="0"+szx2
+                                                         z=z+1
                                              
 
 
-                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3 or Cx==1:
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3 or Circle_times5==(2**160)-1:
                                               
                                                     
                                               
@@ -329,7 +352,7 @@ class compression:
                                                          z=z+1
    
                                
-                                    if  lenfS<=160 or Circle_times2==(2**160)-1 or ccc==3 or ccc==2 or Cx==1:
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1 or ccc==3 or ccc==2 or Circle_times5==(2**160)-1:
                                                 
                                              sda17="1"+sda17
                                              lenf=len(sda17)
@@ -345,10 +368,10 @@ class compression:
                                     
                                              lenf=len(sda17)
                                             
-                                             sda17=szx1+sda171+szx+sda17
+                                             sda17=szx1+sda171+szx1+sda171+szx+sda17
                                              #print(len(sda17))
 
-                                    if lenfS<=160 or Circle_times2==(2**160)-1 or ccc==3 or ccc==2 or Cx==1:
+                                    if lenfS<=160 or Circle_times2==(2**160)-1 or ccc==3 or ccc==2 or Circle_times5==(2**160)-1:
                                         
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
