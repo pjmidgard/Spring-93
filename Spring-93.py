@@ -311,6 +311,8 @@ class compression:
                                          if Cx==1:
                                              sda17="1"+sda7
                                              Circle_times5=Circle_times5+1
+                                             Circle_times4=0
+                                             
                                              
                                          if ccc==2 and Cx==0:
                                              sda17="100"+sda17
