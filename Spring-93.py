@@ -54,20 +54,22 @@ class compression:
                     ccc=1
 
                     if i==2:
-                        if nameas[nac-4:nac]==".bin":
+                        Format=".Spring93"
+                        Long_Format=len(Format)
+                        if nameas[nac-Long_Format:nac]==".Spring93":
                    
-                        	nameas=name[:nac-4]
+                        	nameas=name[:nac-Long_Format]
                         	nac=len(nameas)
                         	
                         	C=1
 
-                        elif nameas[nac-4:nac]!=".bin":
-                                print("Sorry, this is not binary file!")
+                        elif nameas[nac-Long_Format:nac]!=".Spring93":
+                                print("Sorry, this is not .Spring93")
                                 raise SystemExit
                    
                     if i==1:
                         
-                        nameas=name+".bin"
+                        nameas=name+".Spring93"
                     
                     	
                     nac=len(nameas)
