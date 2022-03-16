@@ -217,6 +217,8 @@ class compression:
                                     szx=""
 
                                     sda6=""
+                                    sda7=""
+                                   
 
                                     #Compression
 
@@ -228,6 +230,9 @@ class compression:
                                     ei=0
                                     
                                     while ei<lenf6:
+                                             
+                                            if Circle_times2==0:
+                                                 sda7=sda3
                                              
                                             
                                         
@@ -245,8 +250,11 @@ class compression:
                                             if T7==0:
                                                 ccc=3
                                             if T7<0:
-                                                print("Error")
-                                                raise SystemExit
+                                                ccc=3
+                                            
+                                            
+                                          
+                                                  
                                                 
                                                 
                                             
@@ -260,9 +268,7 @@ class compression:
                                            
                                               
                                             
-                                              
-                                             
-
+                              
                                            
                                             sda11=bin(T7)[2:]
                                             
@@ -313,7 +319,7 @@ class compression:
                                              sda17="110"+sda17
                                              
                                          elif ccc==3:
-                                             sda17="111"+sda17
+                                             sda17="11111111"+sda7
                                              
                                              
                                          elif ccc==2:
