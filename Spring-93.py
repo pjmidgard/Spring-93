@@ -294,6 +294,7 @@ class compression:
                                          if ccc==3:
                                              sda17="111"+sda17
                                              
+                                             
                                          if ccc==2:
                                              sda17="100"+sda17
                                          else:
@@ -301,7 +302,7 @@ class compression:
                                              sda17="110"+sda17
 
 
-                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2:
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc<=3:
                                               
                                                     
                                               
@@ -318,7 +319,7 @@ class compression:
                                                          z=z+1
    
                                
-                                    if  lenfS<=160 or Circle_times2==(2**160)-1 or ccc==2:
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1 or ccc<=3:
                                                 
                                              sda17="1"+sda17
                                              lenf=len(sda17)
@@ -337,7 +338,7 @@ class compression:
                                              sda17=szx1+sda171+szx+sda17
                                              #print(len(sda17))
 
-                                    if lenfS<=160 or Circle_times2==(2**160)-1 or ccc==2:
+                                    if lenfS<=160 or Circle_times2==(2**160)-1 or ccc<=3:
                                         
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
