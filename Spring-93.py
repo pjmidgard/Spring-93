@@ -52,6 +52,7 @@ class compression:
                     nac=len(nameas)
                     
                     ccc=1
+                    Cx=0
 
                     if i==2:
                         Format=".Spring93"
@@ -237,7 +238,7 @@ class compression:
                                             T7=T7-T8
                                             
                                             if T7==2**(lenf6-1):
-                                                ccc=2
+                                                Cx=1
                                             
                                             elif T7==0:
                                                 ccc=3
@@ -291,18 +292,21 @@ class compression:
                                     sda2=sda17
                                     
                                     if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3:
-                                         if ccc==3:
+                                         if Cx==1:
+                                             sda17="110"+sda17
+                                             
+                                         elif ccc==3:
                                              sda17="111"+sda17
                                              
                                              
-                                         if ccc==2:
+                                         elif ccc==2:
                                              sda17="100"+sda17
-                                         else:
+                                         elif ccc==1:
+                                             sda17="101"+sda17
                                              
-                                             sda17="110"+sda17
 
 
-                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc<=3:
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3:
                                               
                                                     
                                               
