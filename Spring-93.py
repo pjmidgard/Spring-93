@@ -368,7 +368,7 @@ class compression:
                                     
                                              lenf=len(sda17)
                                             
-                                             sda17=szx1+sda171+szx1+sda171+szx+sda17
+                                             sda17=szx2+sda172+szx1+sda171+szx+sda17
                                              #print(len(sda17))
 
                                     if lenfS<=160 or Circle_times2==(2**160)-1 or ccc==3 or ccc==2 or Circle_times5==(2**160)-1:
