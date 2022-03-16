@@ -252,24 +252,9 @@ class compression:
                                                 ccc=3
                                             if T7<0:
                                                 ccc=3
+                                                sda17="111"+sda7
                                             
-                                            
-                                          
-                                                  
-                                                
-                                                
-                                            
-                                                
-                                           
-                                             
-                                               
-                                          
-                                     
-                                           
-                                           
-                                              
-                                            
-                              
+                                        
                                            
                                             sda11=bin(T7)[2:]
                                             
@@ -316,16 +301,11 @@ class compression:
                                     if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3 or Cx==1:
                                        
                                         
-                                         if Cx==1:
-                                             sda17="110"+sda17
-                                             
-                                         elif ccc==3:
-                                             sda17="11111111"+sda7
-                                             
-                                             
-                                         elif ccc==2:
+                                         
+                                          
+                                         if ccc==2:
                                              sda17="100"+sda17
-                                         elif ccc==1:
+                                         if ccc==1:
                                              sda17="101"+sda17
                                              
 
