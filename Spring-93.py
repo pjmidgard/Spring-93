@@ -252,7 +252,7 @@ class compression:
                                                 ccc=3
                                             if T7<0:
                                                 Cx=1
-                                                sda17="11111111"+sda7
+                                                
                                             
                                         
                                            
