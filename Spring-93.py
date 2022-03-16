@@ -232,14 +232,27 @@ class compression:
                                         
                                             sda4=sda3[ei:ei+lenf6]
                                             T7 = int(sda4, 2)
+                                           
                                             T8=T7//2
                                             T7=T7-T8
+                                            
+                                            if T7==2**(lenf6-1):
+                                                ccc=2
+                                            
+                                            elif T7==0:
+                                                ccc=3
+                                            else:
+                                                T7=T7+1
+                                            
+                                              
+                                             
 
                                            
                                             sda11=bin(T7)[2:]
                                             
                                                             
                                             lenf=len(sda11)
+                                            
                                                              
                                             szx=""
                                             xc=(lenf6-1)-lenf%(lenf6-1)
@@ -277,12 +290,15 @@ class compression:
                           
                                     sda2=sda17
                                     
-                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2:
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3:
+                                         if ccc==3:
+                                             sda17="111"+sda17
+                                             
                                          if ccc==2:
-                                             sda17="10"+sda17
+                                             sda17="100"+sda17
                                          else:
                                              
-                                             sda17="11"+sda17
+                                             sda17="110"+sda17
 
 
                                     if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2:
