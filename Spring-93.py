@@ -239,7 +239,7 @@ class compression:
                                             if T7==0:
                                                 ccc=3
                                             else:
-                                                T7=T7-1
+                                                T7=T7+1
                                            
                                            
                                               
