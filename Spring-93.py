@@ -251,8 +251,8 @@ class compression:
                                             if T7==0:
                                                 ccc=3
                                             if T7<0:
-                                                ccc=3
-                                                sda17="111"+sda7
+                                                Cx=1
+                                                sda17="11111111"+sda7
                                             
                                         
                                            
@@ -301,8 +301,10 @@ class compression:
                                     if  lenfS<=160 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3 or Cx==1:
                                        
                                         
-                                         
-                                          
+                                         if Cx==0:
+                                             sda17="0"+sda7         
+                                         if Cx==1:
+                                             sda17="1"+sda17    
                                          if ccc==2:
                                              sda17="100"+sda17
                                          if ccc==1:
