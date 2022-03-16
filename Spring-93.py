@@ -173,9 +173,7 @@ class compression:
                                     lenf3=len(sda2)
                                 lenf2=len(sda2)
                                 #print(lenf2)
-                                if i==1:
-                                    if lenf7>=(2**40)-1:
-                                        raise SystemExit
+                                
 
                                 #########################################################################################################################################################
                                 
@@ -223,64 +221,57 @@ class compression:
                                     sda11=""
                                     
                                     sda17=""
-                                    sda12=""
-                                    sda14=""
-
                                     
                                     ei=0
-                                    former=0
-                                    former2=0
-                                    former3=0
-                                     
-                                     
+                                    
                                     while ei<lenf6:
                                              
-                                          
-                                            if Circle_times2>=0:
-                                                sda4=sda3[ei:ei+1]
-                                                
-                                     
-                                     
-                                             
-                                            if sda4=="0":
-                                                    sda11=bin(former)[2:]
-                                           
-                                                    if Circle_times2>=0:
-                         
-
-                                                           
-                                                                
-                                                                 
+                                            
+                                        
+                                            sda4=sda3[ei:ei+8]
+                                            T7 = int(sda4, 2)
+                                            T8=T7//2
+                                            T7=T7-T8
+                                              
+                                            sda11=bin(T7)[2:]
+                                                            
+                                            lenf=len(sda11)
                                                              
-                                                                lenf=len(sda11)
-                                                             
-                                                                szx=""
-                                                                xc=5-lenf%5
-                                                                z=0
-                                                                if xc!=5:
-                                                                         while z<xc:
-                                                                             szx="0"+szx
-                                                                             z=z+1
+                                            szx=""
+                                            xc=7-lenf%7
+                                            z=0
+                                            if xc!=7:
+                                                while z<xc:
+                                                        szx="0"+szx
+                                                        z=z+1
                                          
                                                          
-                                                                sda11=szx+sda11
-                                                                former3=former2
-                                                                        
-                                                                if former>31:
-                                                                        print("This file not able to compress.")
-                                                                        raise SystemExit
-                                                             
-                                                           
-                                                    sda10=sda10+sda11
-                                                    former=0
-                                                                                                   
-                                            former=former+1
-                                            if Circle_times2>=0:
-                                                ei=ei+1
+                                            sda11=szx+sda11
+                                            sda10=sda10+sda11
+                                      
+                                                                
+                                            
+                                            ei=ei+8
                                                       
                                             
                  
                                     sda17=sda10
+
+                                    sda17="1"+sda17
+                                    lenf=len(sda17)
+                                        
+                                    szx=""
+                                    xc=8-lenf%8
+                                    z=0
+                                    if xc!=8:
+                                           while z<xc:
+                                                szx="0"+szx
+                                                z=z+1
+   
+                                    
+                                    lenf=len(sda17)
+                                            
+                                    sda17=szx+sda17
                                     
                                     #print(sda17)
                               
@@ -294,9 +285,21 @@ class compression:
                                     sda2=sda17
 
 
-
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1:
+                                                
+                                             sda171=bin(Circle_times2)[2:]
+                                             lenf=len(sda171)
+                                        
+                                             szx1=""
+                                             xc=160-lenf%160
+                                             z=0
+                                             if xc!=160:
+                                                     while z<xc:
+                                                         szx1="0"+szx1
+                                                         z=z+1
+   
                                
-                                    if  Circle_times2==1:
+                                    if  lenfS<=160 or Circle_times2==(2**160)-1:
                                                 
                                              sda17="1"+sda17
                                              lenf=len(sda17)
@@ -312,10 +315,10 @@ class compression:
                                     
                                              lenf=len(sda17)
                                             
-                                             sda17=szx+sda17
+                                             sda17=szx1+sda171+szx+sda17
                                              #print(len(sda17))
 
-                                    if Circle_times2==1:
+                                    if lenfS<=160 or Circle_times2==(2**160)-1:
                                         
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
