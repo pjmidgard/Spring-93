@@ -251,8 +251,6 @@ class compression:
                                                T7=T7+1
                                             if T7==T8:
                                                T7=T7-1
-                                            if T7==0:
-                                                ccc=3
                                             if T7<0:
                                                 Cx=1
                                                 
@@ -294,6 +292,7 @@ class compression:
                                     sda17=sda10
                                     lenfS=len(sda17)
                                     #print(lenfS)
+                                
                                     
                                     
 
