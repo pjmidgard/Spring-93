@@ -369,7 +369,7 @@ class compression:
                                                          z=z+1
    
                                
-                                    if  lenfS<=8 or Circle_times2==(2**160)-1 or ccc==3 or ccc==2 or Circle_times5==(2**160)-1:
+                                    if  lenfS<=8 or Circle_times2==(2**160)-1 or ccc==3 or ccc==2 or Circle_times5==1:
                                                 
                                              sda17="1"+sda17
                                              lenf=len(sda17)
