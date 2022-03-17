@@ -306,17 +306,17 @@ class compression:
                                     if  lenfS<=8 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3 or Cx==1 or Circle_times5==1:
                                             
                                          if Cx==2 and Circle_times5==1:
-                                             sda17="1"+sda17
+                                             sda17="0"+sda17
                                          if Cx==0:
-                                             sda17="0"+sda17         
+                                             sda17="10"+sda17         
                                          if Cx==1 and Circle_times5==0:
-                                             sda17="1"+sda7
+                                             sda17="11"+sda7
                                              Circle_times5=Circle_times5+1
                                              Circle_times2=0
                                              Cx=2
-                                         if ccc==2 and Cx==0:
+                                         if ccc==2 and Cx!=1:
                                              sda17="1"+sda17
-                                         if ccc==1 and Cx==0:
+                                         if ccc==1 and Cx!=1:
                                              sda17="0"+sda17
 
                                     if  lenfS<=8 or Circle_times2==(2**160)-1  or ccc==2 or ccc==3 or Circle_times5==1:
