@@ -388,7 +388,7 @@ class compression:
                                              sda17=szx3+sda173+szx2+sda172+szx1+sda171+szx+sda17
                                              #print(len(sda17))
 
-                                    if lenfS<=8 or Circle_times2==(2**160)-1 or ccc==3 or ccc==2 or Circle_times5==(2**160)-1:
+                                    if lenfS<=8 or Circle_times2==(2**160)-1 or ccc==3 or ccc==2 or Circle_times5==1:
                                         
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
