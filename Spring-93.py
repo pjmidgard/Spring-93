@@ -319,10 +319,6 @@ class compression:
                                              
                                     
                                     if  lenfS<=8 or Circle_times2==(2**160)-1:
-                                            
-                                        
-                                          
-                                            
                                          if ccc==1 and Cx!=1:
                                              sda17="0"+sda17
                                             
