@@ -279,6 +279,8 @@ class compression:
                                             lenf=len(sda10)
                                             if lenf6==lenf:
                                                 ccc=2
+                                                
+                                         
                                       
                                                                 
                                             
@@ -318,7 +320,7 @@ class compression:
                                                          z=z+1
                                              
                                     
-                                    if  lenfS<=8 or Circle_times2==(2**160)-1:
+                                    if  lenfS<=8 or Circle_times2==(2**160)-1 or ccc==2:
                                          
                                        
                                          if ccc==1:
@@ -337,7 +339,7 @@ class compression:
                                             
                                        
 
-                                    if  lenfS<=8 or Circle_times2==(2**160)-1:
+                                    if  lenfS<=8 or Circle_times2==(2**160)-1 or ccc==2:
                                               
                                                     
                                               
@@ -355,7 +357,7 @@ class compression:
                                              
 
 
-                                    if  lenfS<=8 or Circle_times2==(2**160)-1:
+                                    if  lenfS<=8 or Circle_times2==(2**160)-1 or ccc==2:
                                               
                                                     
                                               
@@ -372,7 +374,7 @@ class compression:
                                                          z=z+1
    
                                
-                                    if  lenfS<=8 or Circle_times2==(2**160)-1:
+                                    if  lenfS<=8 or Circle_times2==(2**160)-1 or ccc==2:
                                                 
                                              sda17="1"+sda17
                                              lenf=len(sda17)
@@ -391,7 +393,7 @@ class compression:
                                              sda17=szx3+sda173+szx2+sda172+szx1+sda171+szx+sda17
                                              #print(len(sda17))
 
-                                    if lenfS<=8 or Circle_times2==(2**160)-1:
+                                    if lenfS<=8 or Circle_times2==(2**160)-1 or ccc==2:
                                         
                                     		L=len(sda17)
                                     		n = int(sda17, 2)
