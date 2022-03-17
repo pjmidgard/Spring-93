@@ -330,7 +330,7 @@ class compression:
                                          if Cx==1 and Circle_times5==0:
                                              sda17="1"+sda17
                                              Circle_times5=Circle_times5+1
-                                             Circle_times2=0
+                                            
                                              Cx=2
                                          if ccc==2:
                                              sda17="1"+sda17
