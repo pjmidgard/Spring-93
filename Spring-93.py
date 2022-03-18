@@ -455,6 +455,8 @@ class compression:
                                     Minus_One_bits=""
                                     Number_Start=0
                                     Times=""
+                                    Ones=""
+                                    Minus_One=0
                                 
                                     T7=0
                                     T9=0
