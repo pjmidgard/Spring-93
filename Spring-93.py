@@ -82,6 +82,8 @@ class compression:
                     Circle_times5=0
                     
                     Start_N=0
+
+                    T9=0
                     
                     cvf=2
                     cvf1=0
