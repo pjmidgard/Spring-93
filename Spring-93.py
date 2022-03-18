@@ -527,6 +527,7 @@ class compression:
 
                                                 if Minus_One==0:
                                                          T7 = int(sda3, 2)
+                                                
 
                                                 
                                                         
