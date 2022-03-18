@@ -540,7 +540,8 @@ class compression:
 
                                                 
                                         if   Circle_times2>0:
-                                                Number_Back=(2**Number_Back_N)+2
+                                                if N1==2:
+                                                        Number_Back=(2**Number_Back_N)+2
 
                                                 if T7==Number_Back and N1==0:
                                                        T8=T7-1
