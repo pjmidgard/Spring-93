@@ -80,6 +80,9 @@ class compression:
                     Circle_times3=0
                     
                     Circle_times5=0
+                    
+                    Start_N=0
+                    
                     cvf=2
                     cvf1=0
                     s=""
@@ -457,10 +460,14 @@ class compression:
                                     Times=""
                                     Ones=""
                                     Minus_One=0
+                                    T8=0
                                 
                                     T7=0
                                     T9=0
                                     Lenf_File=0
+                                    Number_Back_N=7
+                                    N1=2
+                        
                                  
                                     if C==1:
                                         if   Circle_times2==0:
@@ -530,14 +537,49 @@ class compression:
                                                 
 
                                                 
-                                                        
-
-                                                
-                                                
-                                                
                                         if   Circle_times2>0:
-                                        	xc3=0
-                                        
+                                                Number_Back=(2**Number_Back_N)+2
+
+                                                if T7==Number_Back and N1==0:
+                                                       T8=T7-1
+                                                       T10=T8-1
+                                                       T9=T9+T10
+                                                       T7=T9
+                                                       N1=2
+                                                       Number_Back_N=7
+                                                if T7==Number_Back and N1==1:
+                                                       T8=T7+1
+                                                       T10=T8
+                                                       T9=T9+T10
+                                                       T7=T9
+                                                       N1=2
+                                                       Number_Back_N=7
+                                                if T7==Number_Back and N1==2:
+                                                       T8=T7-1
+                                                       T10=T8-1
+                                                       T9=T9+T10
+                                                       T7=T9
+                                                       N1=2
+                                                       Number_Back_N=7
+
+                                                if T7<Number_Back:
+                                                        N1=0
+                                                        
+                                                       
+                                                if T7<Number_Back and N1==0:
+                                                        Start_N=1
+                                                        Number_Back=Number_Back-1
+                                                        N1=1
+                                                if T7<Number_Back and N1==1:
+                                                        Start_N=1
+                                                        Number_Back=Number_Back-1
+                                                        N1=0
+
+                                                if T7>Number_Back:
+                                                        Number_Back_N=Number_Back_N+1
+                                                        
+                                                
+                                                        
                                         if C==1 and T!=0:
                                                 sda17=sda3
                                                 
@@ -585,15 +627,11 @@ class compression:
                                         
                                             if C==1 and T!=0:
  
-                                            	sda17=bin(T7)[3:]
+                                            	sda17=bin(T7)[2:]
                                             	lenf14=len(sda17)
                                             	#print(lenf14)
                                             	lenf16=lenf14%8
-                                            	if lenf16!=0 or lenf14>=((2**40)-1)*8 or Corrupted==1:
-
-                                            		print("file corrupted")
-                                            		raise SystemExit
-                                            		
+                                            	
                                             	
                                             	lenf=len(sda17)
                                             	szx=""
