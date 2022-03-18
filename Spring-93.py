@@ -305,7 +305,7 @@ class compression:
                           
                                     sda2=sda17
 
-                                    if lenfS>(2**160)-1:
+                                    if lenf6>(2**160)-1:
                                             print("This file too big")
                                             x2 = time()
                                             x3=x2-x
