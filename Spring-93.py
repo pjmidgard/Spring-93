@@ -344,10 +344,10 @@ class compression:
                                              Cx=2
                                          if ccc==2:
                                              sda17="1"+sda17
-                                         if ccc==2 and T7=2**(lenf6-1)+2:
+                                         if ccc==2 and T7==2**(lenf6-1)+2:
                                                  sda17="0"
                                                  
-                                         if ccc==2 and T7=2**(lenf6-1)+1:
+                                         if ccc==2 and T7==2**(lenf6-1)+1:
                                                  sda17="10"
                                                  
                                          if ccc==1:
@@ -367,7 +367,7 @@ class compression:
                                              szx2=""
                                              xc=8-lenf%8
                                              z=0
-                                             if xc!=160:
+                                             if xc!=8:
                                                      while z<xc:
                                                          szx2="0"+szx2
                                                          z=z+1
@@ -452,60 +452,92 @@ class compression:
                                     sda4=""
                                     sda5=""
                                     sda6=""
+                                    Minus_One_bits=""
+                                    Number_Start=0
+                                    Times=""
                                 
                                     T7=0
                                     T9=0
+                                    Lenf_File=0
                                  
                                     if C==1:
                                         if   Circle_times2==0:
 
-                                                sda11=sda3[0:8]
-                                                xc3 = int(sda11, 2)
-                                                if xc3>7:
-                                                        Corrupted=1
-                                                sda3=sda3[8:]
-                                                lenf6=len(sda3)
+                                                sda11=sda3[0:160]
+                                                Lenf_File = int(sda11, 2)
+                                                sda3=sda3[160:]
 
-                                                sda10=sda3[0:16]
-                                                Deep5 = int(sda10, 2)
-                                                Deep5=Deep5+2
-                                                Deep4=Deep5-1
-                                                sda3=sda3[16:]
-                                                lenf6=len(sda3)
-                                                Deep7=Deep5-2
+                                                Minus_One_bits=sda3[0:8]
+                                                Minus_One = int(Minus_One_bits, 2)
+                                                sda3=sda3[8:]
+
+                                                Times=sda3[0:160]
+                                                T = int(Times, 2)
+                                                sda3=sda3[160:]
+
+                                                if Minus_One==1:
+                                                        Number_Start=-1
+                                                        
+                                                if sda3[0:9]=="000000001":
+                                                        sda3=sda3[9:]
+                                                if sda3[0:8]=="00000001":
+                                                        sda3=sda3[8:]
+
+                                                if sda3[0:7]=="0000001":
+                                                        sda3=sda3[7:]
+
+                                                if sda3[0:6]=="000001":
+                                                        sda3=sda3[6:]
+
+                                                if sda3[0:5]=="00001":
+                                                        sda3=sda3[5:]
+                                                        
+                                                if sda3[0:4]=="0001":
+                                                        sda3=sda3[4:]
+
+                                                if sda3[0:3]=="001":
+                                                        sda3=sda3[3:]
+
+                                                if sda3[0:2]=="01":
+                                                        sda3=sda3[2:]
+
+                                                if sda3[0:1]=="1":
+                                                        sda3=sda3[1:]
+
+                                                Ones=sda3[0:1]
+                                                if Ones=="0" and Minus_One==0:
+                                                        T7==2**(Lenf_File-1)+2
+                                                        sda3=sda3[1:]
+
+                                                Ones=sda3[0:2]
+                                                if Ones=="10" and Minus_One==0:
+                                                        T7==2**(Lenf_File-1)+1
+                                                        sda3=sda3[2:]
+
+                                                if Ones=="11" and Minus_One==1:
+                                                        T7=Number_Start
+                                                        sda3=sda3[2:]
+
+                                                if Ones=="11" and Minus_One==0:
+                                                        sda3=sda3[2:]
+
+                                                sda3=sda3[2:]
+
+                                                if Minus_One==0:
+                                                         T7 = int(sda3, 2)
+
                                                 
-                                                sda6=sda3[0:48]
-                                                T = int(sda6, 2)
-                                                sda3=sda3[48:]
-                                                lenf6=len(sda3)
-                                                print("Deep: ")
-                                                print(Deep7)
+                                                        
+
+                                                
+                                                
                                                 
                                         if   Circle_times2>0:
                                         	xc3=0
                                         
                                         if C==1 and T!=0:
-                                                sda3=sda3[xc3:]
-                                                lenf6=len(sda3)
-                                                sda4=sda3[lenf6-Deep4:lenf6-1]
-                                                sda6=sda3[lenf6-(Deep4-1):lenf6-1]
-                                                sda5=sda3[lenf6-1:lenf6]
-                                                sda3=sda3[0:lenf6-Deep4]
-                                        
-                                                T7 = int(sda3, 2)
-                                                T11 = int(sda4, 2)
-                                                T12 = int(sda6, 2)
-                                                T9 = int(sda5, 2)
-
-                                                if sda5=="0":
-                                                        e=((2**Deep5)-1)+(2**Deep5-7)-1
-                                                        T8=T11
-                                                if sda5=="1":
-                                                        e=((2**(Deep2+1))-1)+(2**(Deep2-6))-1
-                                                        T8=T12
-                                                j=e+T8
-                                                T7=T7+1
-                                                T7=T7*j
+                                                sda17=sda3
+                                                
                                                 
                                        
                                     sda6=sda4
