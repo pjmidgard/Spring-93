@@ -539,14 +539,8 @@ class compression:
                                                 if Ones=="11" and Minus_One==0:
                                                         sda3=sda3[2:]
                                                         sda3=sda3[2:]
+                                                        T7 = int(sda3, 2)
 
-                                                
-
-                                                if Minus_One==0:
-                                                         T7 = int(sda3, 2)
-                                                
-
-                                                
                                         if   Circle_times2>0:
                                                 if N1==2:
                                                         Number_Back=(2**Number_Back_N)+2
