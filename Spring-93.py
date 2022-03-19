@@ -100,6 +100,8 @@ class compression:
                     D=0
 
                     DD=0
+                    N1=2
+                    Number_Back_N=7
 
                     x=0
                     x1=0
@@ -471,8 +473,8 @@ class compression:
                                     T7=0
                                     T9=0
                                     Lenf_File=0
-                                    Number_Back_N=7
-                                    N1=2
+                                    
+                                    
                         
                                  
                                     if C==1:
