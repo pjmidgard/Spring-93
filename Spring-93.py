@@ -604,7 +604,7 @@ class compression:
                                                        T10=T8
                                                        T9=T7+T10
                                                        T7=T9
-                                                       T7=T7+4
+                                                       T7=T7-4
                                                        
                                                        N1=2
                                                        Number_Back_N=7
