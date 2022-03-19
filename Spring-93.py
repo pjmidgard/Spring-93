@@ -63,7 +63,7 @@ class compression:
                         	
                         
 
-                        if nameas[nac-Long_Format:nac]!="paq8o":
+                        if nameas[nac-Long_Format:nac]!=".paq8o":
                                 print("Sorry, this is not .paq8o.")
                                 raise SystemExit
                    
