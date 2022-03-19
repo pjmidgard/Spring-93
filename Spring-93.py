@@ -105,6 +105,7 @@ class compression:
                     T7=0
                     T8=0
                     T9=0
+                    S=1
 
                     x=0
                     x1=0
@@ -482,7 +483,7 @@ class compression:
                         
                                  
                                     if C==1:
-                                        if   Circle_times2==0:
+                                        if   Circle_times2==0 and S==1:
 
                                                 sda11=sda3[0:160]
                                                 Lenf_File = int(sda11, 2)
@@ -495,6 +496,7 @@ class compression:
                                                 Times=sda3[0:160]
                                                 T = int(Times, 2)
                                                 sda3=sda3[160:]
+                                                
 
                                                 if Minus_One==1:
                                                         Number_Start=-1
@@ -553,12 +555,15 @@ class compression:
                                                         
                                                         
                                                         T7 = int(sda3, 2)
-                                                        Circle_times2=Circle_times2+1
+                                                        S=0
+                                                        
                                                                                         
 
-                                        if   Circle_times2>0:
+                                        if   Circle_times2>=0:
                                                 if N1==2:
                                                         Number_Back=(2**Number_Back_N)+1
+
+                                                
                                                         
                                         
                                                 if T7==Number_Back and N1==1:
