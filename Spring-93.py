@@ -563,11 +563,12 @@ class compression:
                                                 if N1==2:
                                                         Number_Back=(2**Number_Back_N)+1
 
-                                                
+                                                print(T7)
                                                         
                                         
                                                 if T7==Number_Back and N1==1:
                                                        T8=T7-1
+                                                       
                                                        
                                                        T10=T8-1
                                                 
@@ -575,6 +576,7 @@ class compression:
                                                        
                                                       
                                                        T7=T9
+                                                       T7=T7+4
                                                        Circle_times2=Circle_times2+1
                                                 
                                                        
@@ -590,6 +592,7 @@ class compression:
                                                        T9=T7+T10
                                                        
                                                        T7=T9
+                                                       T7=T7+4
                                                        Circle_times2=Circle_times2+1
                                 
                                                        
@@ -600,10 +603,12 @@ class compression:
                                                        T10=T8
                                                        T9=T7+T10
                                                        T7=T9
+                                                       T7=T7+4
                                                        
                                                        N1=2
                                                        Number_Back_N=7
                                                        Circle_times2=Circle_times2+1
+                                               
 
                                                 if T7<Number_Back:
                                                         N1=0
