@@ -534,11 +534,13 @@ class compression:
                                                 if Ones=="11" and Minus_One==1:
                                                         T7=Number_Start
                                                         sda3=sda3[2:]
+                                                        sda3=sda3[2:]
 
                                                 if Ones=="11" and Minus_One==0:
                                                         sda3=sda3[2:]
+                                                        sda3=sda3[2:]
 
-                                                sda3=sda3[2:]
+                                                
 
                                                 if Minus_One==0:
                                                          T7 = int(sda3, 2)
