@@ -56,6 +56,18 @@ class compression:
                     sda7=""
                     Circle_times2=0
 
+                    if i==1:
+                        Format=".paq8o"
+                        Long_Format=len(Format)
+               
+                        	
+                        
+
+                        if nameas[nac-Long_Format:nac]!="paq8o":
+                                print("Sorry, this is not .paq8o.")
+                                raise SystemExit
+                   
+
                     if i==2:
                         Format=".Spring93"
                         Long_Format=len(Format)
