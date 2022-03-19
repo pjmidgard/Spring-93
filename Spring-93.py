@@ -34,7 +34,7 @@ class compression:
                     sda4=""
                     sda5=""
                     sda6=""
-                    Corrupted=0
+                    
                       
                     name = input("What is name of file? ")
 
@@ -624,18 +624,13 @@ class compression:
                                         if  Circle_times2==T:
                                         	   
                                             if C==1 and T==0:
-                                            	sda17=sda3
-                                            	lenf=len(sda17)
-                                            	szx=""
-                                            	xc=8-lenf%8
-                                            	z=0
-                                            	if xc!=0:
-                                            	        if xc!=8:
-                                            	            while z<xc:
-                                            	            	szx="0"+szx
-                                            	            	z=z+1
-                                            	sda17=szx+sda17
-                                        
+                                                print("Sorry, this file is Corrupted!")
+                                                x2 = time()
+                                                x3=x2-x
+                                                xs=float(x3)
+                                                return print(x3)
+   
+                                            	
                                             if C==1 and T!=0:
  
                                             	sda17=bin(T7)[2:]
