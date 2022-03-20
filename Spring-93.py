@@ -78,6 +78,7 @@ class compression:
                     
                     	
                     nac=len(nameas)
+                    Lenf_File=0
                     
                     Circle_times3=0
                     
@@ -283,10 +284,7 @@ class compression:
                                           
                                           
                                             
-                                            if T7!=T8:
-                                                T7=T7+1
-                                            if T7==T8:
-                                               T7=T7+2
+                                        
                                             
                                                 
                                             
@@ -498,7 +496,7 @@ class compression:
                                 
                                     
                                     
-                                    Lenf_File=0
+                                    
                                     
                                     
                         
@@ -582,13 +580,16 @@ class compression:
 
                                         if   Circle_times2>=0:
                                                 if N1==2:
-                                                        Number_Back=(2**Number_Back_N)+2+1
+                                                        Number_Back=(2**Number_Back_N)
+                                                
 
                                               
                                                         
                                         
                                                 if T7==Number_Back and N1==1:
-                                                       T8=T7+1
+                                                       
+                                                    
+                                                       
                                                        
                                                        T1=T7%2
                                                        
@@ -597,19 +598,25 @@ class compression:
                                                        if T1!=0:
                                                             T2=1
                                                        T7=T7-T2
+                                                       T8=T7
                                                        
                                                        
                                                        T10=T8
                                                 
-                                                       T9=(T7+1)+T10
+                                                       T9=(T7)+T10
                                                        
                                                        
                                                       
                                                        T7=T9
+                                                       
+                                                       Circle_times2=Circle_times2+1
+                                                       N1=2
                                                         
                                                 if T7==Number_Back and N1==0:
                                                 
-                                                       T8=T7+1
+                                                       
+                                                      
+                                                      
                                                        
                                                        T1=T7%2                                                      
                                                        if T1==0:
@@ -617,6 +624,7 @@ class compression:
                                                        if T1!=0:
                                                             T2=1
                                                        T7=T7-T2
+                                                       T8=T7
                                                        
                                                        
                                                        T10=T8-1
@@ -626,11 +634,15 @@ class compression:
                                                        
                                                       
                                                        T7=T9
+                                                       Circle_times2=Circle_times2+1
+                                                       N1=2
                                                         
                                                 if T7==Number_Back and N1==2:
-                                                       T8=T7+1
-                                                       T1=T7%2
                                                        
+                                                      
+                                                       
+                                                       T1=T7%2
+                                                      
                                                        
                                                                           
                                                        
@@ -639,6 +651,7 @@ class compression:
                                                        if T1!=0:
                                                             T2=1
                                                        T7=T7-T2
+                                                       T8=T7
                                                        
                                                        
                                                        T10=T8-1
@@ -648,6 +661,9 @@ class compression:
                                                        
                                                       
                                                        T7=T9
+                                                       
+                                                       Circle_times2=Circle_times2+1
+                                                       N1=2
                                                         
                                                 
                                                 if T7<Number_Back:
