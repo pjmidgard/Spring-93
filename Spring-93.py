@@ -349,7 +349,7 @@ class compression:
 
                                     if  lenfS<=8 or Circle_times2==(2**160)-1 or DD!=0:
                                         
-                                             sda173=bin(lenfS)[2:]
+                                             sda173=bin(lenf7)[2:]
                                              lenf=len(sda173)
                                         
                                              szx3=""
@@ -686,7 +686,7 @@ class compression:
                                         if  Circle_times2==T:
                                         	   
                                             if C==1 and T==0:
-                                                print("Sorry, this file is Corrupted!")
+                                                print("Sorry, this file Corrupted!")
                                                 x2 = time()
                                                 x3=x2-x
                                                 xs=float(x3)
