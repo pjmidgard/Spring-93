@@ -274,7 +274,7 @@ class compression:
                                             if T1==0:
                                                 T2=1
                                             if T1!=0:
-                                                T2=-1
+                                                T2=2
 
                                             sda16=bin(T8)[2:]
                                             sda18=sda16[::-1]
@@ -283,9 +283,9 @@ class compression:
                                           
                                             
                                             if T7!=T8:
-                                               T7=T7+T2+1+T16+T11
+                                               T7=T7+1+T2
                                             if T7==T8:
-                                               T7=T7-T2+1+T16+T11
+                                               T7=T7+2+T2
                                             
                                                 
                                             
