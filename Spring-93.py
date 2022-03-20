@@ -276,9 +276,9 @@ class compression:
                                           
                                             
                                             if T7!=T8:
-                                               T7=T7+1+T16+11
+                                               T7=T7+1+T16+T11
                                             if T7==T8:
-                                               T7=T7-1+T16+11
+                                               T7=T7-1+T16+T11
                                             
                                                 
                                             
