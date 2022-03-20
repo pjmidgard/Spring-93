@@ -261,16 +261,17 @@ class compression:
                                             sda12=bin(T7)[2:]
                                             T11=0
                                             T11=len(sda12)
+                                            sda14=sda12[::-1]
+                                            T14 = int(sda14, 2)
                                             
-                                           
                                             T8=T7//2
                                             T7=T7-T8
                                           
                                             
                                             if T7!=T8:
-                                               T7=T7+1+T11
+                                               T7=T7+1+T14
                                             if T7==T8:
-                                               T7=T7-1+T11
+                                               T7=T7-1+T14
                                             if T7<0:
                                                 T7=0
                                                 Cx=1
