@@ -310,8 +310,8 @@ class compression:
                                             sda10=sda10+sda11
                                                          
                                             lenf=len(sda10)
-                                            if lenf6==lenf:
-                                                ccc=2
+                                            
+                                              
                                                 
                                          
                                       
