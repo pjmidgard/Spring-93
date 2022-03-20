@@ -267,8 +267,10 @@ class compression:
 
                                             
                                             
-                                            T8=T7//2
-                                            T7=T7-T8
+                                            T8=(T7+1)//2
+                                            
+                                            
+                                           
                                             
                                             T1=T7%2
                                             
@@ -277,6 +279,10 @@ class compression:
                                             if T1!=0:
                                                 T2=2
                                             T7=T7+T2
+                                            
+                                            T7=T7-T8
+                                            
+                                            
 
                                             sda16=bin(T8)[2:]
                                             sda18=sda16[::-1]
