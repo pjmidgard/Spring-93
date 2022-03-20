@@ -285,7 +285,7 @@ class compression:
                                             
                                             if T7!=T8:
                                                 T7=T7+1
-                                            if T==T8:
+                                            if T7==T8:
                                                T7=T7+2
                                             
                                                 
@@ -590,6 +590,8 @@ class compression:
                                                 if T7==Number_Back and N1==1:
                                                        T8=T7+1
                                                        
+                                                       T1=T7%2
+                                                       
                                                        if T1==0:
                                                             T2=2
                                                        if T1!=0:
@@ -609,6 +611,7 @@ class compression:
                                                 
                                                        T8=T7+1
                                                        
+                                                       T1=T7%2                                                      
                                                        if T1==0:
                                                             T2=2
                                                        if T1!=0:
@@ -626,6 +629,10 @@ class compression:
                                                         
                                                 if T7==Number_Back and N1==2:
                                                        T8=T7+1
+                                                       T1=T7%2
+                                                       
+                                                       
+                                                                          
                                                        
                                                        if T1==0:
                                                             T2=2
