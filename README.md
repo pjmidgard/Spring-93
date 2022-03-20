@@ -15,8 +15,7 @@ T7==T8:
 T7=T7-1 
 T7!=T8 
 T7=T7+1     
-This program use for compress .paq8o.
-We can extract 50%.
+
 
 
 
