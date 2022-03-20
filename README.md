@@ -15,7 +15,7 @@ T7==T8:
 T7=T7-1 
 T7!=T8 
 T7=T7+1     
-Add even or odd.
+Add 1 or 2 even or odd.
 
 
 
