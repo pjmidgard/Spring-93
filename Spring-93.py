@@ -712,10 +712,10 @@ class compression:
                                             	
                                             	lenf=len(sda17)
                                             	szx=""
-                                            	xc=8-lenf%8
+                                            	xc=(Lenf_File*8)-lenf%(Lenf_File*8)
                                             	z=0
                                             	if xc!=0:
-                                            	        if xc!=8:
+                                            	        if xc!=Lenf_File*8:
                                             	            while z<xc:
                                             	            	szx="0"+szx
                                             	            	z=z+1
