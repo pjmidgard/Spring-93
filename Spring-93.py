@@ -379,11 +379,11 @@ class compression:
                                          if ccc==2:
                                              sda17="1"+sda17
                                          if ccc==2 and T7==2**(lenf6-1)+1:
-                                                 sda17="0"
+                                                 sda17="0"+sda17
                                                  DD=1
                                                  
                                          if ccc==2 and T7==2**(lenf6-1)+0:
-                                                 sda17="10"
+                                                 sda17="10"+sda17
                                                  DD=2
                                                  
                                          if ccc==1:
@@ -552,34 +552,34 @@ class compression:
 
                                                 Ones=sda3[0:1]
                                                 
-                                                if Ones=="0" and Minus_One==0:
-                                                        T7==2**(Lenf_File-1)+1
+                                                if Ones=="0":
+                                                        
                                                         Lenf_File1=1
                                                         sda3=sda3[1:]
                                                 
                                                 if Ones=="1":
                                                         Ones=sda3[0:2]
                                                 
-                                                if Ones=="10" and Minus_One==0:
-                                                        T7==2**(Lenf_File-1)+0
+                                                if Ones=="10":
+                                                        
                                                         Lenf_File1=1
                                                         sda3=sda3[2:]
                                                         
 
-                                                if Ones=="11" and Minus_One==1:
+                                                if Ones=="11":
                                                         T7=Number_Start
                                                         sda3=sda3[2:]
                                                         sda3=sda3[2:]
                                                         sda3=sda3[1:]
 
-                                                if Ones=="11" and Minus_One==0:
+                                                if Ones=="11":
                                                         sda3=sda3[2:]
                                                         sda3=sda3[2:]
                                                         sda3=sda3[1:]
                                                         
                                                         
-                                                        T7 = int(sda3, 2)
-                                                        S=0
+                                                T7 = int(sda3, 2)
+                                                S=0
                                                         
                                                                                         
 
