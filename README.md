@@ -15,6 +15,7 @@ T7==T8:
 T7=T7-1 
 T7!=T8 
 T7=T7+1     
+Add long of the bits.
 
 
 
