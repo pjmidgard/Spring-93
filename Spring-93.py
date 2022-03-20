@@ -599,11 +599,11 @@ class compression:
                                                        Number_Back_N=7
                                                 if T7==Number_Back and N1==0:
                                                 
-                                                       T8=T7+1
+                                                       T8=T7-1
                                                 
-                                                       T10=T8
+                                                       T10=T8-1
                                                 
-                                                       T9=(T7+1)+T10
+                                                       T9=(T7-1)+T10
                                                        
                                                        T7=T9
                                                       
@@ -621,7 +621,7 @@ class compression:
                                                        Number_Back_N=7
                                                 if T7==Number_Back and N1==2:
                                                        T8=T7-1
-                                                       T10=T8+1
+                                                       T10=T8-1
                                                        T9=(T7-1)+T10
                                                        T7=T9
                                                       
