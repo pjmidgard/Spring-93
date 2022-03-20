@@ -55,7 +55,9 @@ class compression:
                     Cx=0
                     sda7=""
                     Circle_times2=0
+
                    
+
                     if i==2:
                         Format=".Spring93"
                         Long_Format=len(Format)
@@ -102,13 +104,9 @@ class compression:
                     DD=0
                     N1=2
                     Number_Back_N=7
-                    Lenf_File1=0
-                    Lenf_File=0
                     T7=0
                     T8=0
                     T9=0
-                    T10=0
-                    T11=0
                     S=1
 
                     x=0
@@ -259,32 +257,20 @@ class compression:
                                         
                                             sda4=sda3[ei:ei+lenf6]
                                             T7 = int(sda4, 2)
-
                                             sda12=""
                                             sda12=bin(T7)[2:]
+                                            T11=0
                                             T11=len(sda12)
-
-                                            T7=T7+T11
-
                                             
-                                           
                                            
                                             T8=T7//2
-                                            
-                                            
-                                            
                                             T7=T7-T8
-
-                                            
-
-                                        
-                                            
                                           
                                             
                                             if T7!=T8:
-                                               T7=T7+1
+                                               T7=T7+1+T11
                                             if T7==T8:
-                                               T7=T7-1
+                                               T7=T7-1+T11
                                             if T7<0:
                                                 T7=0
                                                 Cx=1
@@ -498,7 +484,7 @@ class compression:
                                 
                                     
                                     
-                                    
+                                    Lenf_File=0
                                     
                                     
                         
@@ -554,7 +540,6 @@ class compression:
                                                 
                                                 if Ones=="0" and Minus_One==0:
                                                         T7==2**(Lenf_File-1)+1
-                                                        Lenf_File1=1
                                                         sda3=sda3[1:]
                                                 
                                                 if Ones=="1":
@@ -562,9 +547,7 @@ class compression:
                                                 
                                                 if Ones=="10" and Minus_One==0:
                                                         T7==2**(Lenf_File-1)+0
-                                                        Lenf_File1=1
                                                         sda3=sda3[2:]
-                                                        
 
                                                 if Ones=="11" and Minus_One==1:
                                                         T7=Number_Start
@@ -601,22 +584,9 @@ class compression:
                                                        
                                                       
                                                        T7=T9
-
-                                                       sda12=""
-                                                       sda12=bin(T7)[2:]
-                                                       T11=len(sda12)
-
-                                                       T7=T7-T11
                                                       
                                                        
                                                        Circle_times2=Circle_times2+1
-                                                       if Lenf_File1==1:
-                                                               Lenf_File=Lenf_File
-
-                                                       if Lenf_File1==0:
-                                                               Lenf_File=Lenf_File+1
-                                                
-                                                               
                                                 
                                                        
                                         
@@ -624,56 +594,31 @@ class compression:
                                                        Number_Back_N=7
                                                 if T7==Number_Back and N1==0:
                                                 
-                                                       T8=T7-1
+                                                       T8=T7+1
                                                 
-                                                       T10=T8-1
+                                                       T10=T8
                                                 
-                                                       T9=(T7-1)+T10
+                                                       T9=(T7+1)+T10
                                                        
                                                        T7=T9
-
-                                                       sda12=""
-                                                       sda12=bin(T7)[2:]
-                                                       T11=len(sda12)
-
-                                                       T7=T7-T11
-
-                                                       
                                                       
                                                       
                                                        
                                                        Circle_times2=Circle_times2+1
-                                                       if Lenf_File1==1:
-                                                               Lenf_File=Lenf_File
-
-                                                       if Lenf_File1==0:
-                                                               Lenf_File=Lenf_File+1
                                 
                                                        
                                                        N1=2
                                                        Number_Back_N=7
                                                 if T7==Number_Back and N1==2:
                                                        T8=T7-1
-                                                       T10=T8-1
+                                                       T10=T8+1
                                                        T9=(T7-1)+T10
                                                        T7=T9
-
-
-                                                       sda12=""
-                                                       sda12=bin(T7)[2:]
-                                                       T11=len(sda12)
-
-                                                       T7=T7-T11
                                                       
                                                        
                                                        N1=2
                                                        Number_Back_N=7
                                                        Circle_times2=Circle_times2+1
-                                                       if Lenf_File1==1:
-                                                               Lenf_File=Lenf_File
-
-                                                       if Lenf_File1==0:
-                                                               Lenf_File=Lenf_File+1
                                                
                                                 
                                                 if T7<Number_Back:
@@ -741,16 +686,11 @@ class compression:
                                             	lenf14=len(sda17)
                                             	#print(lenf14)
                                             	lenf16=lenf14%8
-
-                                            	
-
                                             	
                                             	
                                             	lenf=len(sda17)
-                                            	
                                             	szx=""
                                             	xc=8-lenf%8
-                                            	
                                             	z=0
                                             	if xc!=0:
                                             	        if xc!=8:
@@ -760,7 +700,6 @@ class compression:
                                             	sda17=szx+sda17
 
                                             L=len(sda17)
-                                            
                                          
                                             n = int(sda17, 2)
                                             qqwslenf=len(sda17)
