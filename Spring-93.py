@@ -262,57 +262,13 @@ class compression:
                                         
                                             sda4=sda3[ei:ei+lenf6]
                                             T7 = int(sda4, 2)
-                                            sda12=""
-                                            sda12=bin(T7)[2:]
-                                            T11=0
-                                            T11=len(sda12)
-                                            sda14=sda12[::-1]
-                                            T14 = int(sda14, 2)
-
+                                            sda11=bin(T7)[2:]
+                                            sda11=sda11[1:][::-1]
                                             
-                                            T1=T7%2
-
-                                            if T1==0:
-                                                    T2=1
-                                            if T1!=0:
-                                                    T2=-1
-                                            T7=T7+T2
-
-                                            if T1==0:
-                                                    T3=1
-                                            if T1!=0:
-                                                    T3=2
-                                        
-                                            T8=T7//2
-                                            T7=T7-(T8+T3)
-
-                                            T1=T7%2
-
-                                            if T1==0:
-                                                    T2=1
-                                            if T1!=0:
-                                                    T2=-1
-                                            T7=T7+T2
-
-                                            sda16=bin(T8)[2:]
-                                            sda18=sda16[::-1]
-                                            T16 = int(sda18, 2)
-
+                                            T8 = int(sda11, 2)
                                             
+                                            T7=T7-T8
                                             
-                                          
-                                            
-                                            if T7!=T8:
-                                               T7=T7+1+(T16*1)+T11
-                                            if T7==T8:
-                                               T7=T7-1+(T16*2)+T11
-
-
-                                        
-                                            
-                                                
-                                            
-                                        
                                            
                                             sda11=bin(T7)[2:]
                                             
@@ -636,7 +592,7 @@ class compression:
                                                             if T1!=0:
                                                                     T3=2
                                                         
-                                                            T8=T10//2
+                                                            T8=int(T7//1.1)
                                                             T10=T10-(T8+T3)
 
                                                             T10=T10%2
