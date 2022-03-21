@@ -272,7 +272,7 @@ class compression:
                                             if T1!=0:
                                                     T2=-1
                                             T7=T7+T2
-                                            T8=T7//4
+                                            T8=T7//2
                                             T7=T7-T8
 
                                             T1=T7%2
@@ -292,9 +292,9 @@ class compression:
                                           
                                             
                                             if T7!=T8:
-                                               T7=T7+1+(T16*2)+T11
+                                               T7=T7+1+(T16*1)+T11
                                             if T7==T8:
-                                               T7=T7-1+(T16*3)+T11
+                                               T7=T7-1+(T16*2)+T11
                                             
                                                 
                                             
