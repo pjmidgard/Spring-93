@@ -327,18 +327,7 @@ class compression:
                                     		
 
 
-                                    if  lenfS<=lenf7 or Circle_times2==(2**160)-1 or DD!=0:
-                                        
-                                             sda173=bin(lenf7)[2:]
-                                             lenf=len(sda173)
-                                        
-                                             szx3=""
-                                             xc=160-lenf%160
-                                             z=0
-                                             if xc!=160:
-                                                     while z<xc:
-                                                         szx3="0"+szx3
-                                                         z=z+1
+
                                              
                                     
                                     if  lenfS<=lenf7 or Circle_times2==(2**160)-1 or ccc==2 or DD!=0:
@@ -369,7 +358,18 @@ class compression:
                                                  sda17="11"+sda17
                                                  
                                             
-                                       
+                                    if  lenfS<=lenf7 or Circle_times2==(2**160)-1 or DD!=0:
+                                        
+                                             sda173=bin(lenf7)[2:]
+                                             lenf=len(sda173)
+                                        
+                                             szx3=""
+                                             xc=160-lenf%160
+                                             z=0
+                                             if xc!=160:
+                                                     while z<xc:
+                                                         szx3="0"+szx3
+                                                         z=z+1
 
                                     if  lenfS<=lenf7 or Circle_times2==(2**160)-1 or DD!=0:
                                               
