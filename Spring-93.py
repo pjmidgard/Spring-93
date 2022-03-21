@@ -81,6 +81,7 @@ class compression:
                     Lenf_File=0
                     
                     Circle_times3=0
+                    T8=0
                     
                     Circle_times5=0
                     
@@ -596,76 +597,61 @@ class compression:
                                                                                         
 
                                         if   Circle_times2>=0:
-                                                if N1==2:
-                                                        Number_Back=(2**Number_Back_N)+1
-
+                                                
                                               
-                                                        
-                                        
-                                                if T7==Number_Back and N1==1:
-                                                       T8=T7+1
-                                                       
-                                                       
-                                                       T10=T8
-                                                
-                                                       T9=(T7+1)+T10
-                                                       
-                                                       
-                                                      
-                                                       T7=T9
-                                                      
-                                                       
-                                                       Circle_times2=Circle_times2+1
-                                                
-                                                       
-                                        
-                                                       N1=2
-                                                       Number_Back_N=7
-                                                if T7==Number_Back and N1==0:
-                                                
-                                                       T8=T7+1
-                                                
-                                                       T10=T8
-                                                
-                                                       T9=(T7+1)+T10
-                                                       
-                                                       T7=T9
-                                                      
-                                                      
-                                                       
-                                                       Circle_times2=Circle_times2+1
-                                
-                                                       
-                                                       N1=2
-                                                       Number_Back_N=7
-                                                if T7==Number_Back and N1==2:
-                                                       T8=T7-1
-                                                       T10=T8+1
-                                                       T9=(T7-1)+T10
-                                                       T7=T9
-                                                      
-                                                       
-                                                       N1=2
-                                                       Number_Back_N=7
-                                                       Circle_times2=Circle_times2+1
-                                               
-                                                
-                                                if T7<Number_Back:
-                                                        N1=0
-                                                        
-                                                        
-                                                       
-                                                if T7<Number_Back and N1==0:
-                                                        Start_N=1
-                                                        Number_Back=Number_Back-1
-                                                        N1=1
-                                                if T7<Number_Back and N1==1:
-                                                        Start_N=1
-                                                        Number_Back=Number_Back-1
-                                                        N1=0
+                                                T8=T8+1
+                                                if T7==T8:
 
-                                                if T7>Number_Back:
-                                                        Number_Back_N=Number_Back_N+1
+                                                            T7=T8
+                                                            sda12=""
+                                                            sda12=bin(T7)[2:]
+                                                            T11=0
+                                                            T11=len(sda12)
+                                                            sda14=sda12[::-1]
+                                                            T14 = int(sda14, 2)
+
+                                                            
+                                                            T1=T7%2
+
+                                                            if T1==0:
+                                                                    T2=1
+                                                            if T1!=0:
+                                                                    T2=-1
+                                                            T7=T7+T2
+
+                                                            if T1==0:
+                                                                    T3=1
+                                                            if T1!=0:
+                                                                    T3=2
+                                                        
+                                                            T8=T7//2
+                                                            T7=T7-(T8+T3)
+
+                                                            T1=T7%2
+
+                                                            if T1==0:
+                                                                    T2=1
+                                                            if T1!=0:
+                                                                    T2=-1
+                                                            T7=T7+T2
+
+                                                            sda16=bin(T8)[2:]
+                                                            sda18=sda16[::-1]
+                                                            T16 = int(sda18, 2)
+
+                                                            
+                                                            
+                                                          
+                                                            
+                                                            if T7!=T8:
+                                                               T7=T7+1+(T16*1)+T11
+                                                            if T7==T8:
+                                                               T7=T7-1+(T16*2)+T11
+                                                        
+                                                            T8=0
+                                                            Circle_times2=Circle_times2+1
+                                                
+                                                      
                                                         
                                                 
                                                         
@@ -719,10 +705,10 @@ class compression:
                                             	
                                             	lenf=len(sda17)
                                             	szx=""
-                                            	xc=8-lenf%8
+                                            	xc=(Lenf_File*8)-lenf%(Lenf_File*8)
                                             	z=0
                                             	if xc!=0:
-                                            	        if xc!=8:
+                                            	        if xc!=Lenf_File*8:
                                             	            while z<xc:
                                             	            	szx="0"+szx
                                             	            	z=z+1
