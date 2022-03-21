@@ -265,7 +265,7 @@ class compression:
                                             T7 = int(sda4, 2)
                                             
                                             
-                                            T7=T7-(2**lenf8)
+                                            T7=T7-(2**lenf7)
                                             
 
                                             
