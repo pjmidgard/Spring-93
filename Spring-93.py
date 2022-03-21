@@ -364,7 +364,7 @@ class compression:
 
                                     if  lenfS<=8 or Circle_times2==(2**160)-1 or DD!=0:
                                         
-                                             sda173=bin(lenfS)[2:]
+                                             sda173=bin(lenf7)[2:]
                                              lenf=len(sda173)
                                         
                                              szx3=""
