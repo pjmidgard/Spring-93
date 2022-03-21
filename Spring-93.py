@@ -118,6 +118,7 @@ class compression:
                     x2=0
                     n=0
                     x = time()
+                    T10=0
 
                     with open(nameas, "w") as f4:
                             f4.write(s)
@@ -603,39 +604,45 @@ class compression:
                                               
                                                 
                                                 if C==1:
-                                                            T8=T8+1
-                                                            T7=T8
+                                                        
+                                                            
+                                                            
+                                                            
+                                                            T7=T7+1
+                                                            T10=T7
+                                                            
+                                                            
                                                             sda12=""
-                                                            sda12=bin(T7)[2:]
+                                                            sda12=bin(T10)[2:]
                                                             T11=0
                                                             T11=len(sda12)
                                                             sda14=sda12[::-1]
                                                             T14 = int(sda14, 2)
 
                                                             
-                                                            T1=T7%2
+                                                            T1=T10%2
 
                                                             if T1==0:
                                                                     T2=1
                                                             if T1!=0:
                                                                     T2=-1
-                                                            T7=T7+T2
+                                                            T10=T10+T2
 
                                                             if T1==0:
                                                                     T3=1
                                                             if T1!=0:
                                                                     T3=2
                                                         
-                                                            T8=T7//2
-                                                            T7=T7-(T8+T3)
+                                                            T8=T10//2
+                                                            T10=T10-(T8+T3)
 
-                                                            T1=T7%2
+                                                            T10=T10%2
 
                                                             if T1==0:
                                                                     T2=1
                                                             if T1!=0:
                                                                     T2=-1
-                                                            T7=T7+T2
+                                                            T10=T10+T2
 
                                                             sda16=bin(T8)[2:]
                                                             sda18=sda16[::-1]
@@ -645,17 +652,22 @@ class compression:
                                                             
                                                           
                                                             
-                                                            if T7!=T8:
-                                                               T7=T7+1+(T16*1)+T11
-                                                            if T7==T8:
-                                                               T7=T7-1+(T16*2)+T11
+                                                            if T10!=T8:
+                                                               T10=T10+1+(T16*1)+T11
+                                                            if T10==T8:
+                                                               T10=T10-1+(T16*2)+T11
 
-                                                            if T9==T7:
+                                                               
+                                                              
+                                                            
+
+                                                            if T9==T10:
+                                                                    #print(T7)
                                                         
                                                                     
-                                                                    T9=T8
+                                                                    T9=T7
                                                                     Circle_times2=Circle_times2+1
-                                                                    T8=0
+                                                                    T7=0
                                                 
                                                       
                                                         
