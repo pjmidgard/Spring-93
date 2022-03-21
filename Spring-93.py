@@ -652,9 +652,10 @@ class compression:
 
                                                             if T9==T7:
                                                         
-                                                                    T8=0
+                                                                    
                                                                     T9=T8
                                                                     Circle_times2=Circle_times2+1
+                                                                    T8=0
                                                 
                                                       
                                                         
