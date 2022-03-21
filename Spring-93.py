@@ -279,7 +279,7 @@ class compression:
                                                     T3=2
                                         
                                             T8=T7//2
-                                            T7=T7-(T8+T2)
+                                            T7=T7-(T8+T3)
 
                                             T1=T7%2
 
