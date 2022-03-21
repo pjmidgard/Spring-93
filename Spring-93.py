@@ -265,7 +265,7 @@ class compression:
                                             T7 = int(sda4, 2)
                                             
                                             
-                                            T7=T7-(2**lenf7)
+                                            T7=T7-((2**lenf7)-1)
                                             
 
                                             
@@ -532,14 +532,14 @@ class compression:
                                                 Ones=sda3[0:1]
                                                 
                                                 if Ones=="0" and Minus_One==0:
-                                                        T9==2**(Lenf_File-1)+1
+                                                        T7==2**(Lenf_File-1)+1
                                                         sda3=sda3[1:]
                                                 
                                                 if Ones=="1":
                                                         Ones=sda3[0:2]
                                                 
                                                 if Ones=="10" and Minus_One==0:
-                                                        T9==2**(Lenf_File-1)+0
+                                                        T7==2**(Lenf_File-1)+0
                                                         sda3=sda3[2:]
 
                                                 if Ones=="11" and Minus_One==1:
@@ -554,7 +554,7 @@ class compression:
                                                         sda3=sda3[1:]
                                                         
                                                         
-                                                        T9 = int(sda3, 2)
+                                                        T7 = int(sda3, 2)
                                                         S=0
                                                         
                                                                                         
@@ -568,7 +568,7 @@ class compression:
                                                             
                                                             
                                                             
-                                                            T9=T9+(2**Lenf_File)
+                                                            T7=T7+((2**lenf7)-1)
                                                             Circle_times2=Circle_times2+1
                                                                     
                                                 
@@ -589,7 +589,7 @@ class compression:
                                     sda5=""
                                     
                                     
-                                    sda17=bin(T9)[2:]
+                                    sda17=bin(T7)[2:]
                                      
                                     sda2=sda17
                                    
@@ -612,7 +612,7 @@ class compression:
                                             	
                                             if C==1 and T!=0 or T==0:
  
-                                            	sda17=bin(T9)[2:]
+                                            	sda17=bin(T7)[2:]
                                             	lenf14=len(sda17)
                                             	#print(lenf14)
                                             	lenf16=lenf14%8
