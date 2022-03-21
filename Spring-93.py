@@ -78,7 +78,6 @@ class compression:
                     
                     	
                     nac=len(nameas)
-                    Lenf_File=0
                     
                     Circle_times3=0
                     
@@ -266,31 +265,36 @@ class compression:
                                             T14 = int(sda14, 2)
 
                                             
-                                            
-                                            T8=(T7+1)//2
-                                            
-                                            
-                                           
-                                            
                                             T1=T7%2
-                                            
+
                                             if T1==0:
-                                                T2=1
+                                                    T2=1
                                             if T1!=0:
-                                                T2=2
+                                                    T2=-1
                                             T7=T7+T2
-                                            
+                                            T8=T7//4
                                             T7=T7-T8
-                                            
-                                            
+
+                                            T1=T7%2
+
+                                            if T1==0:
+                                                    T2=1
+                                            if T1!=0:
+                                                    T2=-1
+                                            T7=T7+T2
 
                                             sda16=bin(T8)[2:]
                                             sda18=sda16[::-1]
                                             T16 = int(sda18, 2)
-                                          
+
+                                            
+                                            
                                           
                                             
-                                        
+                                            if T7!=T8:
+                                               T7=T7+1+(T16*2)+T11
+                                            if T7==T8:
+                                               T7=T7-1+(T16*3)+T11
                                             
                                                 
                                             
@@ -315,8 +319,8 @@ class compression:
                                             sda10=sda10+sda11
                                                          
                                             lenf=len(sda10)
-                                            
-                                              
+                                            if lenf6==lenf:
+                                                ccc=2
                                                 
                                          
                                       
@@ -354,7 +358,7 @@ class compression:
 
                                     if  lenfS<=8 or Circle_times2==(2**160)-1 or DD!=0:
                                         
-                                             sda173=bin(lenf7)[2:]
+                                             sda173=bin(lenfS)[2:]
                                              lenf=len(sda173)
                                         
                                              szx3=""
@@ -502,7 +506,7 @@ class compression:
                                 
                                     
                                     
-                                    
+                                    Lenf_File=0
                                     
                                     
                         
@@ -586,91 +590,58 @@ class compression:
 
                                         if   Circle_times2>=0:
                                                 if N1==2:
-                                                        Number_Back=(2**Number_Back_N)
-                                                
+                                                        Number_Back=(2**Number_Back_N)+1
 
                                               
                                                         
                                         
                                                 if T7==Number_Back and N1==1:
-                                                       
-                                                    
-                                                       
-                                                       
-                                                       T1=T7%2
-                                                       
-                                                       if T1==0:
-                                                            T2=2
-                                                       if T1!=0:
-                                                            T2=1
-                                                       T7=T7-T2
-                                                       T8=T7
+                                                       T8=T7+1
                                                        
                                                        
                                                        T10=T8
                                                 
-                                                       T9=(T7)+T10
+                                                       T9=(T7+1)+T10
                                                        
                                                        
                                                       
                                                        T7=T9
+                                                      
                                                        
                                                        Circle_times2=Circle_times2+1
+                                                
+                                                       
+                                        
                                                        N1=2
-                                                        
+                                                       Number_Back_N=7
                                                 if T7==Number_Back and N1==0:
                                                 
-                                                       
-                                                      
-                                                      
-                                                       
-                                                       T1=T7%2                                                      
-                                                       if T1==0:
-                                                            T2=2
-                                                       if T1!=0:
-                                                            T2=1
-                                                       T7=T7-T2
-                                                       T8=T7
-                                                       
-                                                       
-                                                       T10=T8-1
+                                                       T8=T7+1
+                                                
+                                                       T10=T8
                                                 
                                                        T9=(T7+1)+T10
                                                        
-                                                       
-                                                      
                                                        T7=T9
+                                                      
+                                                      
+                                                       
                                                        Circle_times2=Circle_times2+1
+                                
+                                                       
                                                        N1=2
-                                                        
+                                                       Number_Back_N=7
                                                 if T7==Number_Back and N1==2:
-                                                       
-                                                      
-                                                       
-                                                       T1=T7%2
-                                                      
-                                                       
-                                                                          
-                                                       
-                                                       if T1==0:
-                                                            T2=2
-                                                       if T1!=0:
-                                                            T2=1
-                                                       T7=T7-T2
-                                                       T8=T7
-                                                       
-                                                       
-                                                       T10=T8-1
-                                                
-                                                       T9=(T7+1)+T10
-                                                       
-                                                       
-                                                      
+                                                       T8=T7-1
+                                                       T10=T8+1
+                                                       T9=(T7-1)+T10
                                                        T7=T9
+                                                      
                                                        
-                                                       Circle_times2=Circle_times2+1
                                                        N1=2
-                                                        
+                                                       Number_Back_N=7
+                                                       Circle_times2=Circle_times2+1
+                                               
                                                 
                                                 if T7<Number_Back:
                                                         N1=0
@@ -724,7 +695,7 @@ class compression:
                                         if  Circle_times2==T:
                                         	   
                                             if C==1 and T==0:
-                                                print("Sorry, this file Corrupted!")
+                                                print("Sorry, this file is Corrupted!")
                                                 x2 = time()
                                                 x3=x2-x
                                                 xs=float(x3)
@@ -741,10 +712,10 @@ class compression:
                                             	
                                             	lenf=len(sda17)
                                             	szx=""
-                                            	xc=(Lenf_File*8)-lenf%(Lenf_File*8)
+                                            	xc=8-lenf%8
                                             	z=0
                                             	if xc!=0:
-                                            	        if xc!=Lenf_File*8:
+                                            	        if xc!=8:
                                             	            while z<xc:
                                             	            	szx="0"+szx
                                             	            	z=z+1
