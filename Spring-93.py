@@ -110,6 +110,8 @@ class compression:
                     T8=0
                     T9=0
                     S=1
+                    T7=0
+                    T9=0
 
                     x=0
                     x1=0
@@ -569,14 +571,14 @@ class compression:
                                                 Ones=sda3[0:1]
                                                 
                                                 if Ones=="0" and Minus_One==0:
-                                                        T7==2**(Lenf_File-1)+1
+                                                        T9==2**(Lenf_File-1)+1
                                                         sda3=sda3[1:]
                                                 
                                                 if Ones=="1":
                                                         Ones=sda3[0:2]
                                                 
                                                 if Ones=="10" and Minus_One==0:
-                                                        T7==2**(Lenf_File-1)+0
+                                                        T9==2**(Lenf_File-1)+0
                                                         sda3=sda3[2:]
 
                                                 if Ones=="11" and Minus_One==1:
@@ -591,7 +593,7 @@ class compression:
                                                         sda3=sda3[1:]
                                                         
                                                         
-                                                        T7 = int(sda3, 2)
+                                                        T9 = int(sda3, 2)
                                                         S=0
                                                         
                                                                                         
@@ -599,9 +601,9 @@ class compression:
                                         if   Circle_times2>=0:
                                                 
                                               
-                                                T8=T8+1
-                                                if T7==T8:
-
+                                                
+                                                if C==1:
+                                                            T8=T8+1
                                                             T7=T8
                                                             sda12=""
                                                             sda12=bin(T7)[2:]
@@ -647,9 +649,12 @@ class compression:
                                                                T7=T7+1+(T16*1)+T11
                                                             if T7==T8:
                                                                T7=T7-1+(T16*2)+T11
+
+                                                            if T9==T7:
                                                         
-                                                            T8=0
-                                                            Circle_times2=Circle_times2+1
+                                                                    T8=0
+                                                                    T9=T8
+                                                                    Circle_times2=Circle_times2+1
                                                 
                                                       
                                                         
@@ -697,7 +702,7 @@ class compression:
                                             	
                                             if C==1 and T!=0:
  
-                                            	sda17=bin(T7)[2:]
+                                            	sda17=bin(T9)[2:]
                                             	lenf14=len(sda17)
                                             	#print(lenf14)
                                             	lenf16=lenf14%8
