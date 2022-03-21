@@ -563,71 +563,14 @@ class compression:
                                                 
                                               
                                                 
-                                                if C==1:
+                                                if C==1 and T!=0:
                                                         
                                                             
                                                             
                                                             
-                                                            T7=T7+1
-                                                            T10=T7
-                                                            
-                                                            
-                                                            sda12=""
-                                                            sda12=bin(T10)[2:]
-                                                            T11=0
-                                                            T11=len(sda12)
-                                                            sda14=sda12[::-1]
-                                                            T14 = int(sda14, 2)
-
-                                                            
-                                                            T1=T10%2
-
-                                                            if T1==0:
-                                                                    T2=1
-                                                            if T1!=0:
-                                                                    T2=-1
-                                                            T10=T10+T2
-
-                                                            if T1==0:
-                                                                    T3=1
-                                                            if T1!=0:
-                                                                    T3=2
-                                                        
-                                                            T8=int(T7//1.1)
-                                                            T10=T10-(T8+T3)
-
-                                                            T10=T10%2
-
-                                                            if T1==0:
-                                                                    T2=1
-                                                            if T1!=0:
-                                                                    T2=-1
-                                                            T10=T10+T2
-
-                                                            sda16=bin(T8)[2:]
-                                                            sda18=sda16[::-1]
-                                                            T16 = int(sda18, 2)
-
-                                                            
-                                                            
-                                                          
-                                                            
-                                                            if T10!=T8:
-                                                               T10=T10+1+(T16*1)+T11
-                                                            if T10==T8:
-                                                               T10=T10-1+(T16*2)+T11
-
-                                                               
-                                                              
-                                                            
-
-                                                            if T9==T10:
-                                                                    #print(T7)
-                                                        
+                                                            T9=T9+(2**Lenf_File)
+                                                            Circle_times2=Circle_times2+1
                                                                     
-                                                                    T9=T7
-                                                                    Circle_times2=Circle_times2+1
-                                                                    T7=0
                                                 
                                                       
                                                         
@@ -665,15 +608,9 @@ class compression:
                                         
                                         if  Circle_times2==T:
                                         	   
-                                            if C==1 and T==0:
-                                                print("Sorry, this file is Corrupted!")
-                                                x2 = time()
-                                                x3=x2-x
-                                                xs=float(x3)
-                                                return print(x3)
-   
+                                        
                                             	
-                                            if C==1 and T!=0:
+                                            if C==1 and T!=0 or T==0:
  
                                             	sda17=bin(T9)[2:]
                                             	lenf14=len(sda17)
