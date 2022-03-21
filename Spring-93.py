@@ -78,6 +78,7 @@ class compression:
                     
                     	
                     nac=len(nameas)
+                    Lenf_File=0
                     
                     Circle_times3=0
                     
@@ -512,7 +513,7 @@ class compression:
                                 
                                     
                                     
-                                    Lenf_File=0
+                                    
                                     
                                     
                         
